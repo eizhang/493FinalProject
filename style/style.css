@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+    font-family: chalkduster;
+    src: url(Chalkduster.ttf);
+}
+
 #header, #details {
 	text-align: center; 
-	color: white; 
+	color: black; 
+	font-family: chalkduster; 
 }
+
 
 .game-window {
 	height: 50%;
 	width: 700px;
-	background: #222;
-	border-right: 3px solid #53f;
+	background-image: url("paper.png");
 	position: fixed;
   	top: 40%;
   	left: 50%;
@@ -16,6 +24,6 @@
 
 }
 
-.startButton {
+.startButton, .startImg {
 	text-align: center;
 }
