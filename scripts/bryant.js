@@ -25,4 +25,4 @@ function start_game() {
 $(document).ready(function() {
 
 
-}
+});
