@@ -1,0 +1,34 @@
+/*.game-window {
+	vertical-align: middle;
+}*/
+/*.q13 {
+	width: 100px;
+	height: 100px;
+}*/
+button {
+	width: 100px;
+	height: 50px;
+	display: inline-table;
+	border-radius: 10px;
+}
+
+#q14-1 {
+	left: 10px;
+	top: 30px;
+}
+#q14-2{
+	left: 100px;
+	top: 60px;
+}
+#q14-3{
+	bottom:40px;
+	right:50px;
+}
+#q14-4{
+	bottom:140px;
+	right:90px;
+}
+#q14-5{
+	left: 200px;
+	bottom:90px;
+}
