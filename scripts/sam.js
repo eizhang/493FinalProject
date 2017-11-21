@@ -33,6 +33,8 @@ function level9(){
      	else{
      		console.log("incorrect");
      		alert('wrong!');
+        loseLives();
+
      	}
      });
 	  
@@ -73,6 +75,7 @@ console.log("Welcome to Level 10");
      	if($(this).attr('id') == 'answerL10-0'){
      		alert("wrong");
      		console.log('incorrect');
+        loseLives();
      		banana_count = 0;
         var name = 'img/Banana_'+banana_count+'.png';
         $('#banana').attr('src',name);
@@ -106,6 +109,7 @@ console.log("Welcome to Level 10");
      	else{
      		alert("incorrect");
      		console.log("wrong!");
+        loseLives();
      		banana_count = 0;
      		var name = 'img/Banana_'+banana_count+'.png';
      		$('#banana').attr('src',name);
@@ -204,6 +208,7 @@ function level11(){
     }
     else{
     	alert("wrong");
+      loseLives();
     	console.log('incorrect');
     	$('.Disney').remove();
     	game = 1;
@@ -268,6 +273,7 @@ function level12(){
      	if(change == 0){
      		console.log("incorrect");
      		alert('wrong!');
+        loseLives();
 
      	}
      	else{
@@ -279,6 +285,7 @@ function level12(){
      	else{
      		console.log("incorrect");
      		alert('wrong!');
+        loseLives();
      		change = 0;
      	}
      }

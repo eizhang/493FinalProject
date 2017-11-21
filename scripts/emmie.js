@@ -81,6 +81,19 @@ function clickIncorrect() {
 
 function loseLives() {
 	--lives;
+	console.log('here');
+	$('.startImg').prepend($('<img>',{id:'theImg',src:'img/loss_life.png'}));
+	$('#theImg').css('height','200');
+	$('#theImg').css('width','400');
+	$('#theImg').css('position','absolute');
+	setTimeout(function(){
+		$('#theImg').remove();
+			var name = 'img/'+lives+'_lives.png'
+	console.log(name);
+	$('#num_lives').attr('src',name);
+
+	},1000);
+
 	if (lives < 1){
 		//render game over screen
 	}
