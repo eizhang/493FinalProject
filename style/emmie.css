@@ -12,23 +12,45 @@ button {
 	border-radius: 10px;
 }
 
+.img {
+	opacity: 0;
+}
+
+.img:hover {
+	opacity: 1;
+}
+
 #q14-1 {
 	left: 10px;
 	top: 30px;
+	/*visibility: hidden;*/
 }
+
 #q14-2{
 	left: 100px;
 	top: 60px;
+	/*visibility: hidden;*/
 }
+
 #q14-3{
 	bottom:40px;
 	right:50px;
+	/*visibility: hidden;*/
 }
+
 #q14-4{
 	bottom:140px;
 	right:90px;
+	/*visibility: hidden;*/
 }
+
 #q14-5{
 	left: 200px;
 	bottom:90px;
+	/*visibility: hidden;*/
 }
+
+/*#q14-1:hover, #q14-2:hover, #q14-3:hover, #q14-4:hover, #q14-5:hover{
+	visibility: visible;
+};*/
+
