@@ -26,6 +26,17 @@
   	transform: translate(-50%, -50%);
 
 }
+.lives{
+	/*visibility: hidden;*/
+	position:absolute;
+	bottom: 0;
+	left:0;
+}
+
+#banana{
+	right: 0;
+	position:absolute;
+}
 
 .startButton, .startImg {
 	text-align: center;
