@@ -28,6 +28,10 @@
 	text-align: center;
 }
 
+/*button {
+  background: url("../img/bloo.png");
+}*/
+
 .b {
 	float: right;
 }
@@ -39,4 +43,7 @@
 .d {
 	bottom: 0;
 	float: right;
+  background: url("../img/bloo.png");
+  height: 200px;
+  width: 200px;
 }
