@@ -1,7 +1,15 @@
 var lives = 3;
 var state = 13;
 
-$(document).ready( function() {
+// $(document).ready(function() {
+//   $('#startbtn').click(function(){
+//     $('#details').hide();
+//     $('.startIMG').empty();
+//     level13();
+//   })
+
+// });
+function level13(){
 
 	$('#header').css('display', 'none');
 	$('#details').css('display', 'none');
@@ -22,7 +30,7 @@ $(document).ready( function() {
 		$('.game-window').append('<img class="q13" src="img/donkey.png" />');
 		$('.game-window').append('<img class="q13" src="img/donkey2.png" />');
 
-});
+}
 
 function clickCorrect() {
 	console.log("correct!");
@@ -51,12 +59,14 @@ function clickCorrect() {
 		return;
 	}
 	if (state === 15){
+		++state;
 		colorMe();
 		return;
 		//maze question, with two buttons (start, end)
 		//mouse cant touch color. 
 	}
 	if (state === 16){
+		startMaze();
 		//colorme question, where each color is clicked in a sequence.
 	}
 	//render next question 
@@ -64,7 +74,7 @@ function clickCorrect() {
 
 function clickIncorrect() {
 	console.log('incorrect');
-	alert('wrong');
+	// alert('wrong');
 	loseLives();
 	//lost life animation
 }
@@ -171,11 +181,119 @@ function colorMeGreen() {
 function colorMeYellow() {
 	if (step === 4){
 		$('#q16-5').css('color', 'yellow');
-		$('.game-window').append('<button onclick="clickCorrect()"> next! </button>');
+		$('.game-window').append('<button class="q16" onclick="clickCorrect()"> next! </button>');
 
 	}
 	else{
 		clickIncorrect();
 	}
 
+}
+
+function startMaze() {
+	$('.q16').remove();
+	$('.boxed').remove();
+	$('.game-window').append('<div class="m" id="startMaze" onclick="maze()">Click!</div>');
+	$('#startMaze').css({
+		'position' : 'absolute',
+		'bottom' : '42%',
+		'left' : '0px'
+	});
+}
+
+function maze() {
+	
+	$('.game-window').append('<div class="maze" id="maze_1" onmouseover="clickIncorrect()"><a/></div>');
+	$('.game-window').append('<div class="maze" id="maze_2" onmouseover="clickIncorrect()"><a/></div>');
+	$('.game-window').append('<div class="maze" id="maze_3" onmouseover="clickIncorrect()"><a/></div>');
+	$('.game-window').append('<div class="maze" id="maze_4" onmouseover="clickIncorrect()"><a/></div>');
+	$('.game-window').append('<div class="maze" id="maze_5" onmouseover="clickIncorrect()"><a/></div>');
+	$('.game-window').append('<div class="maze" id="maze_6" onmouseover="clickIncorrect()"><a/></div>');
+	$('.game-window').append('<div class="maze" id="maze_7" onmouseover="clickIncorrect()"><a/></div>');
+	$('.game-window').append('<div class="m" id="endMaze" onclick="end()">Click me now!</div>');
+	$('.game-window').append('<div class="maze" id="maze_8" onmouseover="clickIncorrect()"><a/></div>');
+	$('.game-window').append('<div class="maze" id="maze_9" onmouseover="clickIncorrect()"><a/></div>');
+	$('#endMaze').css({
+		'position' : 'absolute',
+		'top' : '8%',
+		'right' : '6%'
+	});
+	$('#maze_1').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '40px',
+		'width' : '50%',
+		'top' : '0px'
+	})
+	$('#maze_2').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '40%',
+		'width' : '60%',
+		'bottom' : '0px',
+		'left' : '0px'
+	})
+	$('#maze_3').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '20%',
+		'width' : '40%',
+		'bottom' : '0px',
+		'right' : '0px'
+	})
+	$('#maze_4').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '50%',
+		'width' : '30%',
+		'bottom' : '50%',
+		'right' : '20%'
+	})
+	$('#maze_5').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '60%',
+		'width' : '40%',
+		'bottom' : '60px',
+		'left' : '50px'
+	})
+	$('#maze_6').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '80%',
+		'width' : '15%',
+		'bottom' : '0px',
+		'right' : '0px'
+	})
+	$('#maze_7').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '70%',
+		'width' : '10%',
+		'top' : '0px',
+		'right' : '20%'
+	})
+	$('#maze_8').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '5%',
+		'width' : '20%',
+		'top' : '0px',
+		'right':'0px'
+	})
+	$('#maze_9').css({
+		'position' : 'absolute',
+		'background-color' : '#77dd7e',
+		'height' : '100%',
+		'width' : '5%',
+		'top' : '0px',
+		'right':'0px'
+	})
+
+
+}
+
+function end() {
+	$('.game-window').empty();
+	$('.game-window').append('<h1> You Win!!!!</h2>')
 }

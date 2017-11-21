@@ -272,7 +272,8 @@ function level12(){
      	}
      	else{
      	if($(this).attr('id') == 'answerL12-0'){
-     		console.log("correct");
+     		//console.log("correct");
+        level13();
      		//alert("correct");
      	}
      	else{
@@ -292,6 +293,4 @@ $(document).ready(function() {
     level9();
   })
 	
-
-
 });
