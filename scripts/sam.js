@@ -1,15 +1,15 @@
+
 function level9(){
 	console.log("Welcome to Level 9");
 	  $('#header').text("What is the 7th letter of the alphabet?");
 	  var answers = [
 	  	'G','H','I','J'
 	  ]
-	  $('#details').hide();
 	  $('.startIMG').empty();
 
 	  console.log(answers.length);
 	   for (var i = 0; i < 4; i++) {
-        var buttonsDiv = "<button id='answerL9-'" + i + "' class='answer_button'>"+answers[i]+"</button>";
+        var buttonsDiv = "<button id='answerL9-'" + i + "' class='answer_button' >"+answers[i]+"</button>";
         console.log(answers[i]);
         $('.startIMG').append(buttonsDiv);
      };
@@ -26,7 +26,9 @@ function level9(){
 
      	if($(this).text() == 'H'){
      		console.log("correct");
-     		alert("correct");
+        $('.startIMG').empty();
+        $('.answer_button').empty();
+        level10();
      	}
      	else{
      		console.log("incorrect");
@@ -71,7 +73,9 @@ console.log("Welcome to Level 10");
      	if($(this).attr('id') == 'answerL10-0'){
      		alert("wrong");
      		console.log('incorrect');
-     		count = 0;
+     		banana_count = 0;
+        var name = 'img/Banana_'+banana_count+'.png';
+        $('#banana').attr('src',name);
      	}
      	else if($(this).attr('id') == 'answerL10-1' && (banana_count==2 || banana_count == 4)){
      		banana_count++;
@@ -84,8 +88,13 @@ console.log("Welcome to Level 10");
      		$('#banana').attr('src',name);
      		if(banana_count == 6){
      		setTimeout(function(){
-     			alert('correct');
      			console.log("YAY");
+           $('.startIMG').empty();
+        $('.answer_button').empty();
+        level11();
+        $('#game-window').html("");
+        $('#banana').remove();
+
      		},1000);
      	}
      	}
@@ -186,11 +195,12 @@ function level11(){
   	event.stopPropagation();
   console.log($(this).children('img').attr('src'));
     if($(this).children('img').attr('src') == 'img/Disney4.png'){
-    	alert("correct");
+    	//alert("correct");
     	console.log('correct');
-  
+    
     	game = 0;
     	$('.Disney').remove();
+      level12();
     }
     else{
     	alert("wrong");
@@ -226,7 +236,7 @@ function level12(){
 
 	  console.log(answers.length);
 	   for (var i = 0; i < 4; i++) {
-        var buttonsDiv = "<button id='answerL12-" + i + "' class='answer_button'>"+answers[i]+"</button>";
+        var buttonsDiv = "<button height = '50px' width = '50px' id='answerL12-" + i + "' class='answer_button'>"+answers[i]+"</button>";
         console.log(answers[i]);
         $('.startIMG').append(buttonsDiv);
      };
@@ -263,7 +273,7 @@ function level12(){
      	else{
      	if($(this).attr('id') == 'answerL12-0'){
      		console.log("correct");
-     		alert("correct");
+     		//alert("correct");
      	}
      	else{
      		console.log("incorrect");
@@ -276,7 +286,12 @@ function level12(){
 
 }
 $(document).ready(function() {
-	level11();
+  $('#startbtn').click(function(){
+    $('#details').hide();
+    $('.startIMG').empty();
+    level9();
+  })
+	
 
 
 });
