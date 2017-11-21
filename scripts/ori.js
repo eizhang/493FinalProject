@@ -1,8 +1,11 @@
 state = 0;
 
 $(document).ready(function() {
-
+  $(":h2").click(function() {
+    alert("click!");
+  });
 });
+
 
 function question1() {
   console.log("question1!");
@@ -18,31 +21,31 @@ function question1() {
 	]
 
 		$('.game-window').append('<h2 class="q1" id="q_1">' + question_1 + '</h2>');
-		$('.game-window').append('<button class="a" type="button" onclick="Incorrect()">' + answers_1[0] + '</button>');
-		$('.game-window').append('<button class="b" type="button" onclick="Incorrect()">' + answers_1[1] + '</button>');
-		$('.game-window').append('<button class="c" type="button" onclick="Correct()">' + answers_1[2] + '</button>');
-		$('.game-window').append('<button class="d" type="button" onclick="Incorrect()">' + answers_1[3] + '</button>');
+		$('.game-window').append('<button id="a" type="button" onclick="Incorrect()">' + answers_1[0] + '</button>');
+		$('.game-window').append('<button id="b" type="button" onclick="Incorrect()">' + answers_1[1] + '</button>');
+		$('.game-window').append('<button id="c" type="button" onclick="Correct()">' + answers_1[2] + '</button>');
+		$('.game-window').append('<button id="d" type="button" onclick="Incorrect()">' + answers_1[3] + '</button>');
 }
 
 function question2() {
   console.log("question2!");
   $('.game-window').html("");
-  var question_2 = "Click the Answer";
+  var question_2 = "Questioning the choice of color";
 	var answers_2 = [
-		"A",
-		"B",
-		"C",
-		"D"
+		"I'm colorblind",
+		"I'm genderblind",
+		"I am blind",
+		"My cat got stuck in the blinds"
 	]
-  $('.game-window').append('<h2 class="q2" id="q_2">' + question_2 + '</h2>');
-  $('.game-window').append('<button class="a" type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
-  $('.game-window').append('<button class="b" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
-  $('.game-window').append('<button class="c" type="button" onclick="Correct()">' + answers_2[2] + '</button>');
-  $('.game-window').append('<button class="d" type="button" onclick="Incorrect()">' + answers_2[3] + '</button>');
+  $('.game-window').append('<h2 class="q2" id="q_2">' + question_2 + '</h2><h2 id="mark">?</h2><br><br><br><br>');
+  $('.game-window').append('<button id="e" type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
+  $('.game-window').append('<button id="f" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
+  $('.game-window').append('<button id="g" type="button" onclick="Incorrect()">' + answers_2[2] + '</button>');
+  $('.game-window').append('<button id="h" type="button" onclick="Incorrect()">' + answers_2[3] + '</button>');
 }
-
 function question3() {
   console.log("question3!");
+  $('.game-window').html("");
 }
 
 function question4() {
