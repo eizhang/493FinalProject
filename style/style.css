@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: chalkduster;
-    src: url(Chalkduster.ttf);
+    src: url(BiteBullet.ttf);
 }
 
 #header, #details {
@@ -10,7 +10,10 @@
 	color: black; 
 	font-family: chalkduster; 
 }
-
+.answer_button{
+	height: 100px;
+	width: 100px;
+}
 
 .game-window {
 	height: 50%;
@@ -22,6 +25,17 @@
   /* bring your own prefixes */
   	transform: translate(-50%, -50%);
 
+}
+.lives{
+	/*visibility: hidden;*/
+	position:absolute;
+	bottom: 0;
+	left:0;
+}
+
+#banana{
+	right: 0;
+	position:absolute;
 }
 
 .startButton, .startImg {
