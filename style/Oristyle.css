@@ -32,20 +32,32 @@
   background: url("../img/bloo.png");
 }*/
 
+#a {
+  height: 150px;
+  width: 150px;
+  float:left;
+}
+
 #b {
-	float: right;
+  height: 150px;
+  width: 150px;
+  float:left;
 }
 
 #c {
-	bottom: 0;
+  height: 150px;
+  width: 150px;
+  float:left;
 }
 
 #d {
-	bottom: 0;
-	float: right;
+	/*bottom: 0;
+	float: right;*/
   background: url("../img/bloo.png");
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
+  padding-bottom: 120px;
+  float:left;
 }
 
 #mark {
@@ -59,4 +71,58 @@
 #q_2 {
   display: inline;
   float: left;
+}
+
+#mich {
+  height: 50px;
+  width: 75px;
+  position: relative;
+}
+
+#osu {
+  height: 50px;
+  width: 75px;
+  position: relative;
+}
+
+#minn {
+  height: 50px;
+  width: 75px;
+  position: relative;
+}
+
+#penn {
+  height: 50px;
+  width: 75px;
+  position: relative;
+}
+
+#brainButton {
+  height: 50px;
+  width: 50px;
+}
+
+#bar {
+  height: 25px;
+  width: 25px;
+}
+
+#brain {
+  height: 100px;
+  width: 150px;
+}
+
+#widgetHome {
+  height: 50px;
+  width: 200px;
+}
+
+#jquery {
+  height: 100px;
+  width: 200px;
+}
+
+#angular {
+  height: 100px;
+  width: 100px;
 }
