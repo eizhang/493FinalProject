@@ -1,12 +1,5 @@
 state = 0;
 
-$(document).ready(function() {
-  $(":h2").click(function() {
-    alert("click!");
-  });
-});
-
-
 function question1() {
   console.log("question1!");
   $('#header').css('display', 'none');
@@ -37,7 +30,8 @@ function question2() {
 		"I am blind",
 		"My cat got stuck in the blinds"
 	]
-  $('.game-window').append('<h2 class="q2" id="q_2">' + question_2 + '</h2><h2 id="mark">?</h2><br><br><br><br>');
+  $('.game-window').append('<h2 class="q2" id="q_2">' + question_2 + '</h2>');
+  $('.game-window').append('<h2 id="mark">?</h2><br><br><br><br>');
   $('.game-window').append('<button id="e" type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
   $('.game-window').append('<button id="f" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
   $('.game-window').append('<button id="g" type="button" onclick="Incorrect()">' + answers_2[2] + '</button>');
@@ -85,3 +79,9 @@ function populate() {
   // $('.game-window').append("<input type='image' src='img/startbutton.png' width='200' height='120' class='c'/>");
   // $('.game-window').append("<input type='image' src='img/startbutton.png' width='200' height='120' class='d'/>");
 }
+
+$(document).ready(function() {
+  $('#mark').click(function() {
+    alert("click!");
+  });
+});
