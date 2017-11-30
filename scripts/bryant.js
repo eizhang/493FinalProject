@@ -40,10 +40,10 @@ function level2() {
 	var buttonTimeout = setTimeout(function(){
 		alert("NICE");
 	}, 5000);
-	$('#bigButton').click() {
+	$('#bigButton').click(function() {
 		window.clearTimeout(buttonTimeout);
 		alert("DEAD");
-	}
+	});
 }
 
 function level3() {

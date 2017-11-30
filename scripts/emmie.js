@@ -10,10 +10,9 @@ var state = 13;
 
 // });
 function level13(){
-
+	state = 13;
 	$('#header').css('display', 'none');
 	$('#details').css('display', 'none');
-	$('.startImg').css('display', 'none');
 	var question_1 = "Where did the donkey go?";
 	var answers_1 = [
 		"there",
@@ -236,7 +235,8 @@ function maze() {
 		'background-color' : '#77dd7e',
 		'height' : '40px',
 		'width' : '50%',
-		'top' : '0px'
+		'top' : '0px',
+		'opacity':'0.5'
 	})
 	$('#maze_2').css({
 		'position' : 'absolute',
@@ -244,7 +244,8 @@ function maze() {
 		'height' : '40%',
 		'width' : '60%',
 		'bottom' : '0px',
-		'left' : '0px'
+		'left' : '0px',
+		'opacity':'0.5'
 	})
 	$('#maze_3').css({
 		'position' : 'absolute',
@@ -252,7 +253,8 @@ function maze() {
 		'height' : '20%',
 		'width' : '40%',
 		'bottom' : '0px',
-		'right' : '0px'
+		'right' : '0px',
+		'opacity':'0.5'
 	})
 	$('#maze_4').css({
 		'position' : 'absolute',
@@ -260,7 +262,8 @@ function maze() {
 		'height' : '50%',
 		'width' : '30%',
 		'bottom' : '50%',
-		'right' : '20%'
+		'right' : '20%',
+		'opacity':'0.5'
 	})
 	$('#maze_5').css({
 		'position' : 'absolute',
@@ -268,7 +271,8 @@ function maze() {
 		'height' : '60%',
 		'width' : '40%',
 		'bottom' : '60px',
-		'left' : '50px'
+		'left' : '50px',
+		'opacity':'0.5'
 	})
 	$('#maze_6').css({
 		'position' : 'absolute',
@@ -276,7 +280,8 @@ function maze() {
 		'height' : '80%',
 		'width' : '15%',
 		'bottom' : '0px',
-		'right' : '0px'
+		'right' : '0px',
+		'opacity':'0.5'
 	})
 	$('#maze_7').css({
 		'position' : 'absolute',
@@ -284,7 +289,8 @@ function maze() {
 		'height' : '70%',
 		'width' : '10%',
 		'top' : '0px',
-		'right' : '20%'
+		'right' : '20%',
+		'opacity':'0.5'
 	})
 	$('#maze_8').css({
 		'position' : 'absolute',
@@ -292,7 +298,8 @@ function maze() {
 		'height' : '5%',
 		'width' : '20%',
 		'top' : '0px',
-		'right':'0px'
+		'right':'0px',
+		'opacity':'0.5'
 	})
 	$('#maze_9').css({
 		'position' : 'absolute',
@@ -300,7 +307,8 @@ function maze() {
 		'height' : '100%',
 		'width' : '5%',
 		'top' : '0px',
-		'right':'0px'
+		'right':'0px',
+		'opacity':'0.5'
 	})
 
 

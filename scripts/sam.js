@@ -297,7 +297,7 @@ $(document).ready(function() {
   $('#startbtn').click(function(){
     $('#details').hide();
     $('.startIMG').empty();
-    level9();
-  })
+    level13();
+  });
 	
 });
