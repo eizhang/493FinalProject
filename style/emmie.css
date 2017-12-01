@@ -50,7 +50,12 @@ button {
 	/*visibility: hidden;*/
 }
 
-/*#q14-1:hover, #q14-2:hover, #q14-3:hover, #q14-4:hover, #q14-5:hover{
-	visibility: visible;
-};*/
+#startMaze {
+	width: 50px;
+	height: auto;
+}
 
+#endMaze {
+	width: 50px;
+	height: auto;
+}

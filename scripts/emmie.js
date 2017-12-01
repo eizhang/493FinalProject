@@ -87,7 +87,8 @@ function loseLives() {
 	console.log('here');
 	if (state === 17) {
 		$('.maze').remove();
-		$('.m').remove();
+		$('#startMaze').remove();
+		$('#endMaze').remove();
 		startMaze();
 	}
 	$('.lives').append($('<img>',{id:'theImg',src:'img/loss_life.png'}));
@@ -164,7 +165,7 @@ function colorMe() {
 	$('#q16-15').css('background-color', 'yellow');
 	$('#q16-16').css('background-color', 'purple');
 	$('#q16-17').css('background-color', 'white');
-	$('#q16-18').css('background-color', 'black');
+	$('#q16-18').css('background-color', 'coral');
 	$('#q16-19').css('background-color', 'red');
 
 }
@@ -220,7 +221,7 @@ function colorMeYellow() {
 }
 
 function startMaze() {
-	$('.startIMG').append('<div class="m" id="startMaze" onclick="maze()">Click!</div>');
+	$('.startIMG').append('<img id="startMaze" src= "img/corgi.jpg" onclick="maze()"/>');
 	$('#startMaze').css({
 		'position' : 'absolute',
 		'bottom' : '42%',
@@ -229,15 +230,15 @@ function startMaze() {
 }
 
 function maze() {
-	
+
 	$('.startIMG').append('<div class="maze" id="maze_1" onmouseover="clickIncorrect()"><a/></div>');
-	$('.startIMG').append('<div class="maze" id="maze_2" onmouseover="clickIncorrect()"><a/></div>');
+	$('.startIMG').append('<div class="maze" id="maze_2" onmouseover="clickIncorrect()">Do not touch the green!!!</div>');
 	$('.startIMG').append('<div class="maze" id="maze_3" onmouseover="clickIncorrect()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_4" onmouseover="clickIncorrect()"><a/></div>');
-	$('.startIMG').append('<div class="maze" id="maze_5" onmouseover="clickIncorrect()"><a/></div>');
+	$('.startIMG').append('<div class="maze" id="maze_5" onmouseover="clickIncorrect()"><h2>Help baby corgi get to momma corgi through the forest!</h2></div>');
 	$('.startIMG').append('<div class="maze" id="maze_6" onmouseover="clickIncorrect()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_7" onmouseover="clickIncorrect()"><a/></div>');
-	$('.startIMG').append('<div class="m" id="endMaze" onclick="end()">Click me now!</div>');
+	$('.startIMG').append('<img id="endMaze" src="img/mom.jpg" onclick="end()"/>');
 	$('.startIMG').append('<div class="maze" id="maze_8" onmouseover="clickIncorrect()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_9" onmouseover="clickIncorrect()"><a/></div>');
 	$('#endMaze').css({
