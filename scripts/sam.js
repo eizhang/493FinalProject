@@ -1,5 +1,6 @@
 
 function level9(){
+
 	console.log("Welcome to Level 9");
 	  $('#header').text("What is the 7th letter of the alphabet?");
 	  var answers = [
@@ -28,7 +29,7 @@ function level9(){
      		console.log("correct");
         $('.startIMG').empty();
         $('.answer_button').empty();
-        level10();
+        Correct();
      	}
      	else{
      		console.log("incorrect");
@@ -43,6 +44,7 @@ function level9(){
 
 }
 function level10(){
+
 console.log("Welcome to Level 10");
  $('#header').text("What is this?");
 	  var answers = [
@@ -94,7 +96,7 @@ console.log("Welcome to Level 10");
      			console.log("YAY");
            $('.startIMG').empty();
         $('.answer_button').empty();
-        level11();
+        Correct();
         $('#game-window').html("");
         $('#banana').remove();
 
@@ -176,7 +178,7 @@ function level11(){
   **       allows us to adjust position more appropriately.
   **/
   // Pick a random starting position within the game window
-  var startingPosition = Math.random() * ($('.game-window').width()-DisneySize-200);  // Using 50px as the size of the alien (since no instance exists yet)
+  var startingPosition = Math.random() * ($('.game-window').width()-DisneySize-100);  // Using 50px as the size of the alien (since no instance exists yet)
   
   // Set the instance-specific properties
   curDisney.css('right', startingPosition+"px");
@@ -204,7 +206,7 @@ function level11(){
     
     	game = 0;
     	$('.Disney').remove();
-      level12();
+        Correct();
     }
     else{
     	
@@ -278,9 +280,9 @@ function level12(){
      	}
      	else{
      	if($(this).attr('id') == 'answerL12-0'){
-     		//console.log("correct");
-        level13();
-     		//alert("correct");
+     		
+          Correct();
+     	
      	}
      	else{
      		console.log("incorrect");
@@ -298,6 +300,7 @@ $(document).ready(function() {
   $('#startbtn').click(function(){
     $('#details').hide();
     $('.startIMG').empty();
+    $('.lives').css('visibility','visible');
    question1();
   });
 	

@@ -159,6 +159,18 @@ function Correct() {
     case 4:
         level9();
       break;
+    case 5:
+      level10();
+      break;
+    case 6:
+      level11();
+      break;
+    case 7:
+      level12();
+      break;
+    case 8:
+      level13();
+      break;
     default:
       break;
   }

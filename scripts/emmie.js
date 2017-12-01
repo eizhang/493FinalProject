@@ -90,15 +90,21 @@ function loseLives() {
 		$('.m').remove();
 		startMaze();
 	}
-	$('.startImg').prepend($('<img>',{id:'theImg',src:'img/loss_life.png'}));
+	$('.lives').append($('<img>',{id:'theImg',src:'img/loss_life.png'}));
 	$('#theImg').css('height','200');
 	$('#theImg').css('width','400');
+	$('#theImg').css('top','-155');
 	$('#theImg').css('position','absolute');
+    
+    setTimeout(function(){
+		var name = 'img/'+lives+'_lives.png'
+		$('#num_lives').attr('src',name);
+	},500);
+   
+
 	setTimeout(function(){
 		$('#theImg').remove();
-			var name = 'img/'+lives+'_lives.png'
-	console.log(name);
-	$('#num_lives').attr('src',name);
+			
 
 	},1000);
 
