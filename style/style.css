@@ -9,9 +9,52 @@
 	color: black; 
 	font-family: chalkduster; 
 }
-.answer_button{
-	height: 100px;
-	width: 100px;
+
+.answer_button0{
+	height:104px;
+	width:217px;
+	background:url('../img/Button-1.png');
+	border:none;
+	position: absolute;
+	top:30%;
+	left:10%;
+
+}
+.answer_button1{
+	height:105px;
+	width:204px;
+	background:url('../img/Button-2.png');
+	border:none;
+	position: absolute;
+	top:30%;
+	left:60%;
+}
+.answer_button2{
+	height:113px;
+	width:215px;
+	background:url('../img/Button-3.png');
+	border:none;
+	position: absolute;
+	top:60%;
+	left:10%;
+}
+.answer_button3{
+	height:115px;
+	width:216px;
+	background:url('../img/Button-4.png');
+	border:none;
+	position: absolute;
+	top:60%;
+	left:60%;
+}
+
+.L9{
+	font-size: 50px;
+	font-family: chalkduster; 
+}
+.L10{
+	font-size: 30px;
+	font-family: chalkduster; 
 }
 #header{
 	text-align: center;

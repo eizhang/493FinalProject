@@ -1,6 +1,6 @@
 
 function level9(){
-
+state =4;
 	console.log("Welcome to Level 9");
 	  $('#header').text("What is the 7th letter of the alphabet?");
 	  var answers = [
@@ -10,18 +10,42 @@ function level9(){
 
 	  console.log(answers.length);
 	   for (var i = 0; i < 4; i++) {
-        var buttonsDiv = "<button id='answerL9-'" + i + "' class='answer_button' >"+answers[i]+"</button>";
+        var buttonsDiv = "<button class='answer_button L9 answer_button"+i+"' >"+answers[i]+"</button>";
         console.log(answers[i]);
         $('.startIMG').append(buttonsDiv);
      };
+  
 
-     $('.answer_button').hover(function() {
+   $('.answer_button').hover(function() {
         //mouse over
-        $(this).css('background', '#ff0')
+        if($(this).text() == answers[0]){
+        $(this).css('background', "url('./img/Hover-1.png')");
+      }
+        else if($(this).text() == answers[1]){
+          $(this).css('background', "url('./img/Hover-2.png')");
+        }
+        else if($(this).text() == answers[2]){
+            $(this).css('background', "url('./img/Hover-3.png')");
+        }
+        else{
+            $(this).css('background', "url('./img/Hover-4.png')");
+        }
     }, function() {
         //mouse out
-        $(this).css('background', 'white')
+        if($(this).text() == answers[0]){
+        $(this).css('background', "url('./img/Button-1.png')");
+      }
+      else if($(this).text() == answers[1]){
+        $(this).css('background', "url('./img/Button-2.png')");
+      }
+      else if($(this).text() == answers[2]){
+        $(this).css('background', "url('./img/Button-3.png')");
+      }
+      else{
+        $(this).css('background', "url('./img/Button-4.png')");
+      }
     });
+     
 
      $('.answer_button').click(function(){
 
@@ -51,25 +75,55 @@ console.log("Welcome to Level 10");
 	  	'Kiwi','Nectarine','Apple','Berry'
 	  ]
 	  $('#details').hide();
+    $('.game-window').append("<img id='banana' src='img/Banana_0.png'></div>");
+    $('#banana').css('right','0');
+    $('#banana').css('top','0');
+    $('#banana').css('height','200px');
+    $('#banana').css('width','200px');
 	  $('.startIMG').empty();
 	  var banana_count = 0;
 
 	  console.log(answers.length);
 	   for (var i = 0; i < 4; i++) {
-        var buttonsDiv = "<button id='answerL10-" + i + "' class='answer_button'>"+answers[i]+"</button>";
+        var buttonsDiv = "<button id='answerL10-" + i + "'class='answer_button L10 answer_button"+i+"'>"+answers[i]+"</button>";
         console.log(answers[i]);
         $('.startIMG').append(buttonsDiv);
      };
+      $('.answer_button1').css('top','35%');
+       $('.answer_button0').css('top','35%');
 
-     	$('.startIMG').after("<br/>");
-     	$('.game-window').append("<img id='banana' src='img/Banana_0.png'></div>");
+    // 	$('.startIMG').after("<br/>");
+     	//$('.game-window').append("<img id='banana' src='img/Banana_0.png'></div>");
 
-     $('.answer_button').hover(function() {
+  
+   $('.answer_button').hover(function() {
         //mouse over
-        $(this).css('background', '#ff0')
+        if($(this).text() == answers[0]){
+        $(this).css('background', "url('./img/Hover-1.png')");
+      }
+        else if($(this).text() == answers[1]){
+          $(this).css('background', "url('./img/Hover-2.png')");
+        }
+        else if($(this).text() == answers[2]){
+            $(this).css('background', "url('./img/Hover-3.png')");
+        }
+        else{
+            $(this).css('background', "url('./img/Hover-4.png')");
+        }
     }, function() {
         //mouse out
-        $(this).css('background', 'white')
+        if($(this).text() == answers[0]){
+        $(this).css('background', "url('./img/Button-1.png')");
+      }
+      else if($(this).text() == answers[1]){
+        $(this).css('background', "url('./img/Button-2.png')");
+      }
+      else if($(this).text() == answers[2]){
+        $(this).css('background', "url('./img/Button-3.png')");
+      }
+      else{
+        $(this).css('background', "url('./img/Button-4.png')");
+      }
     });
 
      $('.answer_button').click(function(){
@@ -243,7 +297,7 @@ function level12(){
 
 	  console.log(answers.length);
 	   for (var i = 0; i < 4; i++) {
-        var buttonsDiv = "<button height = '50px' width = '50px' id='answerL12-" + i + "' class='answer_button'>"+answers[i]+"</button>";
+        var buttonsDiv = "<button id='answerL12-" + i + "'class='answer_button L10 answer_button"+i+"'>"+answers[i]+"</button>";
         console.log(answers[i]);
         $('.startIMG').append(buttonsDiv);
      };
@@ -303,7 +357,7 @@ $(document).ready(function() {
     $('#word_lives').css('visibility','visible');
     $('#num_lives').css('visibility','visible');
 
-   question1();
+   level9();
   });
   $('#instructionsbtn').click(function(){
     $('#details').hide();
@@ -333,4 +387,7 @@ $(document).ready(function() {
     $('.lives').css('bottom','0');
     $('.lives').css('left','0');
   });
+
+
+  
 });
