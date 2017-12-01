@@ -1,7 +1,6 @@
 function level1() {
-	$('.game-window').empty();
-	$('.game-window').append("<h1 id='header'>What is 1 + 1</h1>");
-	$('.game-window').append("<div class='startImg'></div")
+	$('#header').append("What is 1 + 1");
+	//$('.game-window').append("<div class='startImg'></div")
 
 	var answers = ['2','two','too','window']
 	console.log(answers.length);
@@ -106,9 +105,10 @@ function level3() {
 	 			console.log("YAY");
 	       		$('.startIMG').empty();
 		        $('.answer_button').empty();
-		        Correct();
+		       	
 		        $('#game-window').html("");
 		        $('#mark').remove();
+		        end();
 	    	},1000);
 			}
 		}

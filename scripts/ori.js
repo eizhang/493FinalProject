@@ -220,6 +220,15 @@ function Correct() {
     case 8:
       level13();
       break;
+     case 18:
+      level1();
+      break;
+    case 19:
+      level2();
+      break;
+    case 20:
+      level3();
+      break; 
     default:
       break;
   }

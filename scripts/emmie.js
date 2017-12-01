@@ -11,7 +11,7 @@ var state = 13;
 // });
 function level13(){
 	state = 13;
-	$('#header').css('display', 'none');
+	//$('#header').css('display', 'none');
 	$('#details').css('display', 'none');
 	$('.startIMG').empty();
 	var question_1 = "Where did the donkey go?";
@@ -22,7 +22,7 @@ function level13(){
 		"what am I doing with my life?"
 	]
 
-		$('.startIMG').append('<h2 class="q13" id="q_1">' + question_1 + '</h2>');
+		$('#header').text(question_1);
 		$('.startIMG').append('<button class="q13" type="button" id="a_1_0" onclick="clickIncorrect()">' + answers_1[0] + '</button>');
 		$('.startIMG').append('<button class="q13" type="button" id="a_1_1" onclick="clickIncorrect()">' + answers_1[1] + '</button>');
 		$('.startIMG').append('<button class="q13" type="button" id="a_1_2" onclick="clickCorrect()">' + answers_1[2] + '</button>');
@@ -44,7 +44,8 @@ function clickCorrect() {
 			"but really?",
 			"can you not"
 		]
-		$('.startIMG').append('<h2 class="q14" id="q_1">' + question_2 + '</h2>');
+		//$('.startIMG').append('<h2 class="q14" id="q_1">' + question_2 + '</h2>');
+		$('#header').text(question_2);
 		$('.startIMG').append('<button class="q14" type="button" id="a_2_0" onclick="clickIncorrect()">' + answers_2[0] + '</button>');
 		$('.startIMG').append('<button class="q14" type="button" id="a_2_1" onclick="clickIncorrect()">' + answers_2[1] + '</button>');
 		$('.startIMG').append('<button class="q14" type="button" id="a_2_2" onclick="clickIncorrect()">' + answers_2[2] + '</button>');
@@ -128,7 +129,8 @@ function search() {
 	//3. 
 	$('.q14').remove();
 	// var question = "Where am I?"
-	$('.startIMG').append('<h2 id="q14"> Where am I? </h2>');
+	//$('.startIMG').append('<h2 id="q14"> Where am I? </h2>');
+	$('#header').text('Where am I?');
 	$('.startIMG').append('<div class="img" id="q14-1" onclick="clickIncorrect()"> <img src="img/q14-1.png" /> </div>');
 	$('.startIMG').append('<div class="img" id="q14-2" onclick="clickIncorrect()"> <img src="img/q14-2.png"  /> </div>');
 	$('.startIMG').append('<div class="img" id="q14-3" onclick="clickCorrect()"> <img src="img/q14-3.png"  /> </div>');
@@ -140,13 +142,15 @@ function search() {
 var step = 0;
 function colorMe() {
 	$('.img').remove();
-	$('#q14').remove();
-	$('.startIMG').append('<h1 class="q16"> Color Boggy! </h1> <br>');
-	$('.startIMG').append('<h2 class="q16" id="q16-1" > B </h2>');
-	$('.startIMG').append('<h2 class="q16" id="q16-2" > O </h2>');
-	$('.startIMG').append('<h2 class="q16" id="q16-3" > G </h2>');
-	$('.startIMG').append('<h2 class="q16" id="q16-4" > G </h2>');
-	$('.startIMG').append('<h2 class="q16" id="q16-5" > Y </h2> <br>');
+	//$('#q14').remove();
+
+	//$('.startIMG').append('<h1 class="q16"> Color Boggy! </h1> <br>');
+	$('#header').empty();
+	$('#header').append('<h2 class="q16" id="q16-1" > B </h2>');
+	$('#header').append('<h2 class="q16" id="q16-2" > O </h2>');
+	$('#header').append('<h2 class="q16" id="q16-3" > G </h2>');
+	$('#header').append('<h2 class="q16" id="q16-4" > G </h2>');
+	$('#header').append('<h2 class="q16" id="q16-5" > Y </h2> <br>');
 	$('.startIMG').append('<div class="boxed" id="q16-11" onclick="colorMeBlue()"><a/></div>');
 	$('.startIMG').append('<div class="boxed" id="q16-17" onclick="clickIncorrect()"><a/></div>');
 	$('.startIMG').append('<div class="boxed" id="q16-12" onclick="colorMeOrange()"><a/></div>');
@@ -238,7 +242,7 @@ function maze() {
 	$('.startIMG').append('<div class="maze" id="maze_5" onmouseover="clickIncorrect()"><h2>Help baby corgi get to momma corgi through the forest!</h2></div>');
 	$('.startIMG').append('<div class="maze" id="maze_6" onmouseover="clickIncorrect()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_7" onmouseover="clickIncorrect()"><a/></div>');
-	$('.startIMG').append('<img id="endMaze" src="img/mom.jpg" onclick="end()"/>');
+	$('.startIMG').append('<img id="endMaze" src="img/mom.jpg" onclick="CorrectMaze()"/>');
 	$('.startIMG').append('<div class="maze" id="maze_8" onmouseover="clickIncorrect()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_9" onmouseover="clickIncorrect()"><a/></div>');
 	$('#endMaze').css({
@@ -327,6 +331,13 @@ function maze() {
 		'z-index':'-1'
 	})
 
+
+}
+function CorrectMaze(){
+	$('.maze').remove();
+	$('#startMaze').remove();
+	$('#endMaze').remove();
+	Correct();
 
 }
 function lost(){

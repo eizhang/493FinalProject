@@ -327,6 +327,7 @@ $(document).ready(function() {
     $('#details').show();
     $('.startIMG').show();
     $( ".text" ).remove();
+    $('#header').text('The Impossibruuuuu Quiz')
      $('#word_lives').attr('src','img/Lives.png');
      $('#word_lives').css('visibility','hidden');
     $('.lives').css('bottom','0');
