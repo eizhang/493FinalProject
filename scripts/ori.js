@@ -51,14 +51,16 @@ function question3() {
   $('.game-window').append('<img class="q3" id="minn" src="img/minn.png"></img><br class="q3"><br class="q3">');
   $('.game-window').append('<img class="q3" id="penn" src="img/penn.png"></img>');
   let width = $('.game-window').width() - 75;
+  $('#osu').css('left',width);
+  $('#penn').css('left',width);
 
-    function goRight() {
+    function first() {
       $("#mich").animate({
         left: width
       }, 2500, function() {
       });
         $("#osu").animate({
-        left: width
+        left: 0
       }, 2500, function() {
       });
       $("#minn").animate({
@@ -66,18 +68,18 @@ function question3() {
       }, 2500, function() {
       });
         $("#penn").animate({
-        left: width
+        left: 0
       }, 2500, function() {
       });
-     setTimeout(goLeft, 25);
+     var firstTime = setTimeout(second, 25);
     }
-    function goLeft() {
+    function second() {
         $("#mich").animate({
         left: 0
       }, 2500, function() {
       });
         $("#osu").animate({
-        left: 0
+        left: width
       }, 2500, function() {
       });
       $("#minn").animate({
@@ -85,22 +87,49 @@ function question3() {
       }, 2500, function() {
       });
         $("#penn").animate({
-        left: 0
+        left: width
       }, 2500, function() {
       });
-      setTimeout(goRight, 25);
+      var secondTime = setTimeout(first, 25);
     }
 
-    setTimeout(goRight, 25);
+    setTimeout(first, 25);
 
     $('#mich').click(function() {
       Correct();
     });
     $('#osu').click(function() {
       Incorrect();
+      $('#mich').finish();
+      $('#osu').finish();
+      $('#minn').finish();
+      $('#penn').finish();
+      $('#mich').css('left',0);
+      $('#osu').css('left',width);
+      $('#minn').css('left',0);
+      $('#penn').css('left',width);
+    });
+    $('#minn').click(function() {
+      Incorrect();
+      $('#mich').finish();
+      $('#osu').finish();
+      $('#minn').finish();
+      $('#penn').finish();
+      $('#mich').css('left',0);
+      $('#osu').css('left',width);
+      $('#minn').css('left',0);
+      $('#penn').css('left',width);
     });
     $('#penn').click(function() {
       Incorrect();
+      $('#mich').finish();
+      $('#osu').finish();
+      $('#minn').finish();
+      $('#penn').finish();
+      $('#mich').css('left',0);
+      $('#osu').css('left',width);
+      $('#minn').css('left',0);
+      $('#penn').css('left',width);
     });
 }
 
@@ -115,7 +144,27 @@ function question4() {
   $('.game-window').append('<img class="q4" id="widgetHome" src="img/widgethome.png" style="visibility: hidden"></img>');
   $('.game-window').append('<img class="q4" id="jquery" src="img/jquery.png" style="visibility: hidden"></img>');
   $('.game-window').append('<img class="q4" id="angular" src="img/angular.png" style="visibility: hidden"></img>');
+  $('.game-window').append('<button class="q4" id="timer" type="button" disabled>10</button>');
+  $('.game-window').append('<p class="q4" id="hurry">Hurry up!</p>');
 
+  var x = 10;
+  var y = setInterval(function() {
+    --x;
+    if (x <= -1) {
+      Incorrect();
+      clearInterval(x);
+      $('#hurry').css("visibility", "hidden");
+      $('#timer').css("color", "black");
+      x = 10;
+    } else {
+      $('#timer').html(x);
+      if (x == 5) {
+        $('#hurry').css("visibility", "visible");
+        $('#timer').css("color", "red");
+      }
+    }
+
+  }, 1000);
 }
 
 
@@ -190,4 +239,3 @@ function populate() {
   // $('.game-window').append("<input type='image' src='img/startbutton.png' width='200' height='120' class='c'/>");
   // $('.game-window').append("<input type='image' src='img/startbutton.png' width='200' height='120' class='d'/>");
 }
-
