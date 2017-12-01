@@ -300,8 +300,36 @@ $(document).ready(function() {
   $('#startbtn').click(function(){
     $('#details').hide();
     $('.startIMG').empty();
-    $('.lives').css('visibility','visible');
+    $('#word_lives').css('visibility','visible');
+    $('#num_lives').css('visibility','visible');
+
    question1();
   });
-	
+  $('#instructionsbtn').click(function(){
+    $('#details').hide();
+    $('.startIMG').hide();
+    $('.game-window').css('font-size','27px');
+    $('.game-window').css('font-size','27px');
+    $('#header').text("Instructions");
+    var info = "<p class='text'>try to beat the quiz by answering all of the questions. It's as simple as that! Or is it..... </p>";
+    $('.game-window').append(info);
+    info = "<p class='text'>The questions are far from easy. Some require insane logic, others are completely down to guessing. It's hard but it's NOT impossible! </p>";
+    $('.game-window').append(info);
+
+    info = "<p class='text'>You have 3 lives throughout the quiz. Get an answer incorrect and you'll lose one. Lose all 3 lives and it's Game Over.</p>";
+    $('.game-window').append(info); 
+    $('#word_lives').attr('src','img/Go_back.png');
+    $('#word_lives').css('visibility','visible');
+    $('.lives').css('bottom','5%');
+    $('.lives').css('left','5%');
+  });
+	$('#word_lives').click(function(){
+    $('#details').show();
+    $('.startIMG').show();
+    $( ".text" ).remove();
+     $('#word_lives').attr('src','img/Lives.png');
+     $('#word_lives').css('visibility','hidden');
+    $('.lives').css('bottom','0');
+    $('.lives').css('left','0');
+  });
 });

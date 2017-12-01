@@ -33,10 +33,10 @@ function question2() {
   $('.game-window').append('<h2 class="q2" id="q_2">' + question_2 + '</h2>');
   $('.game-window').append('<h2 class="q2" id="mark">?</h2>');
   $('.game-window').append('<br class="q2"><br class="q2"><br class="q2"><br class="q2">');
-  $('.game-window').append('<button class="q2" id="e" type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
-  $('.game-window').append('<button class="q2" id="f" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
-  $('.game-window').append('<button class="q2" id="g" type="button" onclick="Incorrect()">' + answers_2[2] + '</button>');
-  $('.game-window').append('<button class="q2" id="h" type="button" onclick="Incorrect()">' + answers_2[3] + '</button>');
+  $('.game-window').append('<button class="q2" id="a" type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
+  $('.game-window').append('<button class="q2" id="b" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
+  $('.game-window').append('<button class="q2" id="c" type="button" onclick="Incorrect()">' + answers_2[2] + '</button>');
+  $('.game-window').append('<button class="q2" id="d" type="button" onclick="Incorrect()">' + answers_2[3] + '</button>');
   $('#mark').click(function() {
     Correct();
   });

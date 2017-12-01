@@ -2,17 +2,24 @@
 
 @font-face {
     font-family: chalkduster;
-    src: url(BiteBullet.ttf);
+    src: url(kids.ttf);
 }
 
-#header, #details {
-	text-align: center; 
+.game-window {
 	color: black; 
 	font-family: chalkduster; 
 }
 .answer_button{
 	height: 100px;
 	width: 100px;
+}
+#header{
+	text-align: center;
+	font-size: 50px;
+}
+#details{
+	text-align: center;
+	font-size: 30px;
 }
 
 .game-window {
