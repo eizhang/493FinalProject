@@ -357,7 +357,7 @@ $(document).ready(function() {
     $('#word_lives').css('visibility','visible');
     $('#num_lives').css('visibility','visible');
 
-   level9();
+   question1();
   });
   $('#instructionsbtn').click(function(){
     $('#details').hide();
