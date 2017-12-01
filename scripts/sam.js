@@ -32,7 +32,7 @@ function level9(){
      	}
      	else{
      		console.log("incorrect");
-     		alert('wrong!');
+     		
         loseLives();
 
      	}
@@ -73,7 +73,7 @@ console.log("Welcome to Level 10");
      $('.answer_button').click(function(){
      	console.log($(this).attr('id'));
      	if($(this).attr('id') == 'answerL10-0'){
-     		alert("wrong");
+     	
      		console.log('incorrect');
         loseLives();
      		banana_count = 0;
@@ -107,7 +107,7 @@ console.log("Welcome to Level 10");
      		$('#banana').attr('src',name);
      	}
      	else{
-     		alert("incorrect");
+     		
      		console.log("wrong!");
         loseLives();
      		banana_count = 0;
@@ -207,7 +207,7 @@ function level11(){
       level12();
     }
     else{
-    	alert("wrong");
+    	
       loseLives();
     	console.log('incorrect');
     	$('.Disney').remove();
@@ -272,7 +272,7 @@ function level12(){
      $('.answer_button').click(function(){
      	if(change == 0){
      		console.log("incorrect");
-     		alert('wrong!');
+     		
         loseLives();
 
      	}
@@ -284,7 +284,7 @@ function level12(){
      	}
      	else{
      		console.log("incorrect");
-     		alert('wrong!');
+    
         loseLives();
      		change = 0;
      	}
@@ -293,11 +293,12 @@ function level12(){
  
 
 }
+
 $(document).ready(function() {
   $('#startbtn').click(function(){
     $('#details').hide();
     $('.startIMG').empty();
-    level13();
+   question1();
   });
 	
 });

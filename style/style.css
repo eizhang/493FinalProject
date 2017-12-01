@@ -16,7 +16,7 @@
 }
 
 .game-window {
-	height: 50%;
+	height:500px;
 	width: 700px;
 	background-image: url("paper.png");
 	position: fixed;

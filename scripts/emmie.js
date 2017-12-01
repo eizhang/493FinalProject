@@ -104,6 +104,7 @@ function loseLives() {
 
 	if (lives < 1){
 		//render game over screen
+		lost();
 	}
 
 }
@@ -244,7 +245,7 @@ function maze() {
 		'height' : '40px',
 		'width' : '50%',
 		'top' : '0px',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 	$('#maze_2').css({
 		'position' : 'absolute',
@@ -253,7 +254,7 @@ function maze() {
 		'width' : '60%',
 		'bottom' : '0px',
 		'left' : '0px',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 	$('#maze_3').css({
 		'position' : 'absolute',
@@ -262,7 +263,7 @@ function maze() {
 		'width' : '40%',
 		'bottom' : '0px',
 		'right' : '0px',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 	$('#maze_4').css({
 		'position' : 'absolute',
@@ -271,7 +272,7 @@ function maze() {
 		'width' : '30%',
 		'bottom' : '50%',
 		'right' : '20%',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 	$('#maze_5').css({
 		'position' : 'absolute',
@@ -280,7 +281,7 @@ function maze() {
 		'width' : '40%',
 		'bottom' : '60px',
 		'left' : '50px',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 	$('#maze_6').css({
 		'position' : 'absolute',
@@ -289,7 +290,7 @@ function maze() {
 		'width' : '15%',
 		'bottom' : '0px',
 		'right' : '0px',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 	$('#maze_7').css({
 		'position' : 'absolute',
@@ -298,7 +299,7 @@ function maze() {
 		'width' : '10%',
 		'top' : '0px',
 		'right' : '20%',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 	$('#maze_8').css({
 		'position' : 'absolute',
@@ -307,7 +308,7 @@ function maze() {
 		'width' : '20%',
 		'top' : '0px',
 		'right':'0px',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 	$('#maze_9').css({
 		'position' : 'absolute',
@@ -316,13 +317,16 @@ function maze() {
 		'width' : '5%',
 		'top' : '0px',
 		'right':'0px',
-		'opacity':'0.5'
+		'z-index':'-1'
 	})
 
 
 }
-
+function lost(){
+	$('.game-window').empty();
+	$('.game-window').append('<h1> You Lose!!!!</h2>')
+}
 function end() {
-	$('.startIMG').empty();
-	$('.startIMG').append('<h1> You Win!!!!</h2>')
+	$('.game-window').empty();
+	$('.game-window').append('<h1> You Win!!!!</h2>')
 }

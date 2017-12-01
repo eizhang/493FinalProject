@@ -2,9 +2,9 @@ state = 0;
 
 function question1() {
   console.log("question1!");
-  $('#header').css('display', 'none');
-  $('#details').css('display', 'none');
-  $('.startImg').css('display', 'none');
+ // $('#header').css('display', 'none');
+ //  $('#details').css('display', 'none');
+ //  $('.startImg').css('display', 'none');
   var question_1 = "Click the Blue";
 	var answers_1 = [
 		"Blue",
@@ -141,23 +141,23 @@ function Pump() {
 
 function win() {
   $('.q4').remove();
-  alert("You win!")
+  Correct();
 }
 
 function Correct() {
   ++state;
   switch (state) {
     case 1:
-        question1();
-      break;
-    case 2:
         question2();
       break;
-    case 3:
+    case 2:
         question3();
       break;
-    case 4:
+    case 3:
         question4();
+      break;
+    case 4:
+        level9();
       break;
     default:
       break;
@@ -166,7 +166,8 @@ function Correct() {
 }
 
 function Incorrect() {
-  alert("Wrong!");
+  //alert("Wrong!");
+  loseLives();
 }
 
 function populate() {
@@ -178,6 +179,3 @@ function populate() {
   // $('.game-window').append("<input type='image' src='img/startbutton.png' width='200' height='120' class='d'/>");
 }
 
-$(document).ready(function() {
-
-});
