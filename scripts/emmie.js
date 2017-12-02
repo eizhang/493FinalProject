@@ -86,6 +86,10 @@ function clickIncorrect() {
 function loseLives() {
 	--lives;
 	console.log('here');
+	if (state === 16) {
+		$('.startIMG').empty();
+		colorMe();
+	}
 	if (state === 17) {
 		$('.maze').remove();
 		$('#startMaze').remove();
@@ -141,24 +145,29 @@ function search() {
 
 var step = 0;
 function colorMe() {
+	step = 0;
 	$('.img').remove();
 	//$('#q14').remove();
 
 	//$('.startIMG').append('<h1 class="q16"> Color Boggy! </h1> <br>');
 	$('#header').empty();
-	$('#header').append('<h2 class="q16" id="q16-1" > B </h2>');
+	$('#header').text('Can you color a row port?');
+	$('#header').append('<br><h2 class="q16" id="q16-1" > R </h2>');
 	$('#header').append('<h2 class="q16" id="q16-2" > O </h2>');
-	$('#header').append('<h2 class="q16" id="q16-3" > G </h2>');
-	$('#header').append('<h2 class="q16" id="q16-4" > G </h2>');
-	$('#header').append('<h2 class="q16" id="q16-5" > Y </h2> <br>');
-	$('.startIMG').append('<div class="boxed" id="q16-11" onclick="colorMeBlue()"><a/></div>');
-	$('.startIMG').append('<div class="boxed" id="q16-17" onclick="clickIncorrect()"><a/></div>');
+	$('#header').append('<h2 class="q16" id="q16-3" > W </h2>');
+	$('#header').append('<h2 class="q16" id="q16-8" > <a/> </h2>');
+	$('#header').append('<h2 class="q16" id="q16-4" > P </h2>');
+	$('#header').append('<h2 class="q16" id="q16-5" > O </h2>');
+	$('#header').append('<h2 class="q16" id="q16-6" > R </h2>');
+	$('#header').append('<h2 class="q16" id="q16-7" > T </h2> <br>');
+	$('.startIMG').append('<div class="boxed" id="q16-11" onclick="clickIncorrect()"><a/></div>');
+	$('.startIMG').append('<div class="boxed" id="q16-17" onclick="colorMeWhite()"><a/></div>');
 	$('.startIMG').append('<div class="boxed" id="q16-12" onclick="colorMeOrange()"><a/></div>');
-	$('.startIMG').append('<div class="boxed" id="q16-13" onclick="colorMeGreen()"><a/></div>');
-	$('.startIMG').append('<div class="boxed" id="q16-18" onclick="clickIncorrect()"><a/></div>');
-	$('.startIMG').append('<div class="boxed" id="q16-15" onclick="colorMeYellow()"><a/></div>');
-	$('.startIMG').append('<div class="boxed" id="q16-16" onclick="clickIncorrect()"><a/></div>');
-	$('.startIMG').append('<div class="boxed" id="q16-19" onclick="clickIncorrect()"><a/></div><br>');	
+	$('.startIMG').append('<div class="boxed" id="q16-13" onclick="clickIncorrect()"><a/></div>');
+	$('.startIMG').append('<div class="boxed" id="q16-18" onclick="colorMeTeal()"><a/></div>');
+	$('.startIMG').append('<div class="boxed" id="q16-15" onclick="clickIncorrect()"><a/></div>');
+	$('.startIMG').append('<div class="boxed" id="q16-16" onclick="colorMePurple()"><a/></div>');
+	$('.startIMG').append('<div class="boxed" id="q16-19" onclick="colorMeRed()"><a/></div><br>');	
 	$('.q16').css('display', 'inline-table');
 	$('.boxed').css('display','inline-table');
 	$('.boxed').css('height','50px');
@@ -169,14 +178,14 @@ function colorMe() {
 	$('#q16-15').css('background-color', 'yellow');
 	$('#q16-16').css('background-color', 'purple');
 	$('#q16-17').css('background-color', 'white');
-	$('#q16-18').css('background-color', 'coral');
+	$('#q16-18').css('background-color', 'teal');
 	$('#q16-19').css('background-color', 'red');
 
 }
 
-function colorMeBlue() {
-	if (step === 0){
-		$('#q16-1').css('color', 'blue');
+function colorMeWhite() {
+	if (step === 2){
+		$('#q16-3').css('color', 'white');
 		++step;
 		return;
 	}
@@ -190,19 +199,8 @@ function colorMeOrange() {
 		++step;
 		return;
 	}
-	else{
-		clickIncorrect();
-	}
-
-}
-function colorMeGreen() {
-	if (step === 2){
-		$('#q16-3').css('color', 'green');
-		++step;
-		return;
-	}
-	else if (step === 3){
-		$('#q16-4').css('color', 'green');
+	else if (step === 4){
+		$('#q16-5').css('color', 'orange');
 		++step;
 		return;
 	}
@@ -211,12 +209,40 @@ function colorMeGreen() {
 	}
 
 }
+function colorMePurple() {
+	if (step === 3){
+		$('#q16-4').css('color', 'purple');
+		++step;
+		return;
+	}
+	else{
+		clickIncorrect();
+	}
 
-function colorMeYellow() {
-	if (step === 4){
-		$('#q16-5').css('color', 'yellow');
-		$('.startIMG').append('<button class="q16" onclick="clickCorrect()"> next! </button>');
+}
 
+function colorMeTeal() {
+	if (step === 6){
+		$('#q16-7').css('color', 'teal');
+		clickCorrect();
+
+	}
+	else{
+		clickIncorrect();
+	}
+
+}
+
+function colorMeRed() {
+	if (step === 0){
+		$('#q16-1').css('color', 'red');
+		++step;
+		return;
+	}
+	else if (step === 5){
+		$('#q16-6').css('color', 'red');
+		++step;
+		return;
 	}
 	else{
 		clickIncorrect();
@@ -225,7 +251,9 @@ function colorMeYellow() {
 }
 
 function startMaze() {
-	$('.startIMG').append('<img id="startMaze" src= "img/corgi.jpg" onclick="maze()"/>');
+	$('#header').empty();
+	$('#header').append('<h3 id="startMsg">Click the pupper! </h3>')
+	$('.startIMG').append('<img id="startMaze" src= "img/corgi.jpg" onclick="maze()"></img>');
 	$('#startMaze').css({
 		'position' : 'absolute',
 		'bottom' : '42%',
@@ -234,7 +262,7 @@ function startMaze() {
 }
 
 function maze() {
-
+	$('#startMsg').remove();
 	$('.startIMG').append('<div class="maze" id="maze_1" onmouseover="clickIncorrect()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_2" onmouseover="clickIncorrect()">Do not touch the green!!!</div>');
 	$('.startIMG').append('<div class="maze" id="maze_3" onmouseover="clickIncorrect()"><a/></div>');
