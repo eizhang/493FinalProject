@@ -2,7 +2,8 @@ var state = 13;
 var lives= 3;
 function level13(){
 	state = 13;
-	//$('#header').css('display', 'none');
+	$('#word_lives').css('visibility', 'visible');
+	$('#num_lives').css('visibility', 'visible');
 	$('#details').css('display', 'none');
 	$('.startIMG').empty();
 	var question_1 = "Where is the donkey?";
@@ -152,7 +153,7 @@ function clickCorrect() {
 	//render next question 
 }
 
-function lo() {
+function loseLives() {
 	--lives;
 	console.log('here');
 	if (state === 16) {
@@ -165,12 +166,14 @@ function lo() {
 		$('#endMaze').remove();
 		startMaze();
 	}
-	$('.lives').append($('<img>',{id:'theImg',src:'img/loss_life.png'}));
-	$('#theImg').css('height','200');
-	$('#theImg').css('width','400');
-	$('#theImg').css('top','-155');
+	$('.startIMG').append($('<img>',{id:'theImg',src:'img/loss_life.png'}));
 	$('#theImg').css('position','absolute');
-    
+	$('#theImg').css('height','400');
+	$('#theImg').css('width','400');
+	$('#theImg').css('top','10%');
+	$('#theImg').css('left','15%');
+	
+   
     setTimeout(function(){
 		var name = 'img/'+lives+'_lives.png'
 		$('#num_lives').attr('src',name);
@@ -216,7 +219,6 @@ function colorMe() {
 	$('#header').append('<br><h2 class="q16" id="q16-1" > R </h2>');
 	$('#header').append('<h2 class="q16" id="q16-2" > O </h2>');
 	$('#header').append('<h2 class="q16" id="q16-3" > W </h2>');
-	$('#header').append('<h2 class="q16" id="q16-8" > " " </h2>');
 	$('#header').append('<h2 class="q16" id="q16-4" > P </h2>');
 	$('#header').append('<h2 class="q16" id="q16-5" > O </h2>');
 	$('#header').append('<h2 class="q16" id="q16-6" > R </h2>');
@@ -424,18 +426,25 @@ function maze() {
 }
 
 function CorrectMaze(){
-	$('.maze').remove();
-	$('#startMaze').remove();
-	$('#endMaze').remove();
-	Correct();
+	// $('.maze').remove();
+	// $('#startMaze').remove();
+	// $('#endMaze').remove();
+	$('.startIMG').empty();
+	$('.startIMG').append("<img class='fam' src='img/fam.jpg' style='left:30%; top:15%; height:400px; width:auto;'> <h2 class='fam'> Thanks! I've missed momma! </h2></img>");
+	setTimeout(function(){
+		$('.fam').remove();
+		end();
+	},1000);
 }
 
 function lost(){
 	$('.game-window').empty();
-	$('.game-window').append('<h1> You Lose!!!!</h2>')
+	$('.game-window').append('<h1> You Lose!!!!</h1>')
 }
 
 function end() {
 	$('.game-window').empty();
-	$('.game-window').append('<h1> You Win!!!!</h2>')
+	$('.game-window').append('<h1> You Win!!!!</h1>')
+	$('.game-window').append('<h1 onclick="level1()"> Play again!</h2>')
+
 }
