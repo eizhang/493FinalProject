@@ -9,9 +9,9 @@ Question 3: Click on Kuzco (the llama)
 Question 4: left most button (after the flash)
 Question 5: Behind you
 Question 6: Can you not
-Question 7: Move your mouse around the page to an image that says "click me" in cursive
-Question 8: blue->orange->green->green->yellow
-Question 9: click "click!" -> click "click me now!"
+Question 7: Click the squirrel
+Question 8: red-orange-white-purple-orange-red-teal
+Question 9: click on baby corgi, follow path with mouse cursor, click momma corgi
 
 Game over!! 
 

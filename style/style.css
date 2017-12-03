@@ -48,6 +48,43 @@
 	left:60%;
 }
 
+.answer_button_0{
+	height:104px;
+	width:217px;
+	background:url('../img/Button-1.png');
+	border:none;
+	position: absolute;
+	bottom:27%;
+	left:10%;
+}
+.answer_button_1{
+	height:105px;
+	width:204px;
+	background:url('../img/Button-2.png');
+	border:none;
+	position: absolute;
+	bottom:27%;
+	left:60%;
+}
+.answer_button_2{
+	height:113px;
+	width:215px;
+	background:url('../img/Button-3.png');
+	border:none;
+	position: absolute;
+	bottom:3%;
+	left:10%;
+}
+.answer_button_3{
+	height:115px;
+	width:216px;
+	background:url('../img/Button-4.png');
+	border:none;
+	position: absolute;
+	bottom:3%;
+	left:60%;
+}
+
 .L9{
 	font-size: 50px;
 	font-family: chalkduster; 
@@ -72,7 +109,6 @@
 	position: fixed;
   	top: 40%;
   	left: 50%;
-  /* bring your own prefixes */
   	transform: translate(-50%, -50%);
 
 }

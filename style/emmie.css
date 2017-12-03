@@ -1,16 +1,4 @@
-/*.game-window {
-	vertical-align: middle;
-}*/
-/*.q13 {
-	width: 100px;
-	height: 100px;
-}*/
-button {
-	width: 100px;
-	height: 50px;
-	display: inline-table;
-	border-radius: 10px;
-}
+
 
 .img {
 	opacity: 0;
