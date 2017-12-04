@@ -2,6 +2,7 @@ var state = 13;
 var lives= 3;
 function level13(){
 	state = 13;
+	  $('#q-number').attr('src','img/level9.png');
 	$('#word_lives').css('visibility', 'visible');
 	$('#num_lives').css('visibility', 'visible');
 	$('#details').css('display', 'none');
@@ -16,11 +17,11 @@ function level13(){
 
 	$('#header').text(question_1);
 	for (var i = 0; i < 4; i++) {
-	    var buttonsDiv = "<button class='answer_button L9 answer_button_"+i+"' style='font-size: 20pt'>"+answers_1[i]+"</button>";
+	    var buttonsDiv = "<button class='answer_button L9 answer_button"+i+"' style='font-size: 20pt'>"+answers_1[i]+"</button>";
 	    $('.startIMG').append(buttonsDiv);
 	 };
-	$('.startIMG').append('<img class="q13" src="img/donkey.png" style=" height: 40%; width: auto; top: 15%; position: absolute; left: 20%;" />');
-	$('.startIMG').append('<img class="q13" src="img/donkey2.png" style=" height: 40%;width: auto;top: 15%;position: absolute; right: 20%;"/>');
+	$('.startIMG').append('<img class="q13" src="img/donkey.png" style=" height: 20%; width: auto; top: 35%; position: absolute; left: 40%;" />');
+	$('.startIMG').append('<img class="q13" src="img/donkey2.png" style=" height: 20%;width: auto;top: 15%;position: absolute; right: 10%;"/>');
 
 	$('.answer_button').hover(function() {
         //mouse over
@@ -67,6 +68,7 @@ function level13(){
 }
 function subLevel() {
 	var question_2 = "Confirm yourself!"
+	  $('#q-number').attr('src','img/level10.png');
 
 	var answers_2 = [
 		"are you sure?",
@@ -199,7 +201,7 @@ function addLife() {
 function search() {
 	//look for instructions
 	$('.q14').remove();
-
+	  $('#q-number').attr('src','img/level11.png');
 	$('#header').text('I like acorns...?');
 	$('.startIMG').append('<div class="img" id="q14-4" onclick="loseLives()"> <img src="img/q14-4.png" style="position:absolute; height:100px; width:auto; top:15%; left:15%" /> </div>');
 	$('.startIMG').append('<div class="img" id="q14-1" onclick="loseLives()"> <img src="img/q14-1.png"  style="position:absolute; height:100px; width:auto; top:10%; right:10%"/> </div>');
@@ -213,7 +215,7 @@ var step = 0;
 function colorMe() {
 	step = 0;
 	$('.img').remove();
-
+  $('#q-number').attr('src','img/level12.png');
 	$('#header').empty();
 	$('#header').text('Can you color a row port?');
 	$('#header').append('<br><h2 class="q16" id="q16-1" > R </h2>');
@@ -326,6 +328,7 @@ function startMaze() {
 
 function maze() {
 	$('#startMsg').remove();
+	  $('#q-number').css('visibility','hidden');
 	$('.startIMG').append('<div class="maze" id="maze_1" onmouseover="loseLives()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_2" onmouseover="loseLives()">Do not touch the green!!!</div>');
 	$('.startIMG').append('<div class="maze" id="maze_3" onmouseover="loseLives()"><a/></div>');

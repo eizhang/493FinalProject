@@ -2,6 +2,7 @@ state = 0;
 
 function question1() {
   console.log("question1!");
+  $('#q-number').css('visibility','visible');
  // $('#header').css('display', 'none');
  //  $('#details').css('display', 'none');
  //  $('.startImg').css('display', 'none');
@@ -13,7 +14,7 @@ function question1() {
 		"Blooregard 'Bloo' Q. Kazoo"
 	]
 
-		$('.game-window').append('<h2 class="q1" id="q_1">' + question_1 + '</h2>');
+		$('#header').text(question_1);
 		$('.game-window').append('<button class="q1" id="a" type="button" onclick="Incorrect()">' + answers_1[0] + '</button>');
 		$('.game-window').append('<button class="q1" id="b" type="button" onclick="Incorrect()">' + answers_1[1] + '</button>');
 		$('.game-window').append('<button class="q1" id="c" type="button" onclick="Correct()">' + answers_1[2] + '</button>');
@@ -22,6 +23,7 @@ function question1() {
 
 function question2() {
   console.log("question2!");
+    $('#q-number').attr('src','img/level2.png');
   $('.q1').remove();
   var question_2 = "Questioning the choice of color";
 	var answers_2 = [
@@ -30,8 +32,8 @@ function question2() {
 		"I am blind",
 		"My cat got stuck in the blinds"
 	]
-  $('.game-window').append('<h2 class="q2" id="q_2">' + question_2 + '</h2>');
-  $('.game-window').append('<h2 class="q2" id="mark">?</h2>');
+  $('#header').text(question_2);
+  $('#header').append('<h2 class="q2" id="mark">?</h2>');
   $('.game-window').append('<br class="q2"><br class="q2"><br class="q2"><br class="q2">');
   $('.game-window').append('<button class="q2" id="a" type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
   $('.game-window').append('<button class="q2" id="b" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
@@ -43,9 +45,10 @@ function question2() {
 }
 function question3() {
   console.log("question3!");
+    $('#q-number').attr('src','img/level3.png');
   $('.q2').remove();
   var question_3 = "Pick the best team!";
-  $('.game-window').append('<h2 class="q3" id="q_3">' + question_3 + '</h2>');
+ $('#header').text(question_3);
   $('.game-window').append('<img class="q3" id="mich" src="img/michigan.png"></img><br class="q3"><br class="q3">');
   $('.game-window').append('<img class="q3" id="osu" src="img/osu.png"></img><br class="q3"><br class="q3">');
   $('.game-window').append('<img class="q3" id="minn" src="img/minn.png"></img><br class="q3"><br class="q3">');
@@ -135,9 +138,10 @@ function question3() {
 
 function question4() {
   console.log("question4!");
+    $('#q-number').attr('src','img/level4.png');
   $('.q3').remove();
   var question_4 = "Click to cram for the EECS 493 exam!";
-  $('.game-window').append('<h2 class="q4" id="q_4">' + question_4 + '</h2>');
+  $('#header').text(question_4);
   $('.game-window').append('<button class="q4" id="brainButton" type="button" onclick="Pump()">Study!</button>');
   $('.game-window').append('<img class="q4" id="bar" src="img/greenbar.png"></img>');
   $('.game-window').append('<img class="q4" id="brain" src="img/brain1.png"></img><br class="q4"><br class="q4">');

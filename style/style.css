@@ -120,8 +120,8 @@
 }
 
 #banana{
-	left: 35%;
-	top: 10%;
+	right: 0;
+	top: 5%;
 	position:absolute;
 }
 

@@ -1,7 +1,8 @@
 
 function level9(){
 state =4;
-	console.log("Welcome to Level 9");
+	console.log("Welcome to Level 5");
+    $('#q-number').attr('src','img/level5.png');
 	  $('#header').text("What is the 7th letter of the alphabet?");
 	  var answers = [
 	  	'G','H','I','J'
@@ -69,13 +70,15 @@ state =4;
 }
 function level10(){
 
-console.log("Welcome to Level 10");
+console.log("Welcome to Level 6");
+  $('#q-number').attr('src','img/level6.png');
  $('#header').text("What is this?");
 	  var answers = [
 	  	'Kiwi','Nectarine','Apple','Berry'
 	  ]
 	  $('#details').hide();
     $('.game-window').append("<img id='banana' src='img/Banana_0.png'></div>");
+  
     $('#banana').css('height','200px');
     $('#banana').css('width','200px');
 	  $('.startIMG').empty();
@@ -176,7 +179,8 @@ console.log("Welcome to Level 10");
 var DisneyIdx = 0;
 var game = 0;
 function level11(){
- console.log("Welcome to Level 10");
+ console.log("Welcome to Level 7");
+   $('#q-number').attr('src','img/level7.png');
  $('#header').text("Booyah!");
    $('#details').hide();
 	$('.startIMG').empty();
@@ -285,6 +289,7 @@ function level11(){
 
 function level12(){
 	console.log("Welcome to Level 12");
+    $('#q-number').attr('src','img/level8.png');
 	var change = 0;
 	  $('#header').text("Watch Carefully.....");
 	  var answers = [
@@ -304,12 +309,18 @@ function level12(){
       	function() {
       	for (var i = 0; i < 4; i++) {
       		thing = '#answerL12-' + i;
-        if( thing == '#answerL12-0'){
-     		$(thing).css('background', '#ff0');
-     	}
-     	else{
-     		 $(thing).css('background', 'green');
-     	}
+      if(thing == '#answerL12-0'){
+             $(thing).css('background', "url('./img/Hover-1.png')");
+      }
+      else if(thing == '#answerL12-1'){
+        $(thing).css('background', "url('./img/watch-carefully2.png')");
+      }
+      else if(thing == '#answerL12-2'){
+        $(thing).css('background', "url('./img/watch-carefully3.png')");
+      }
+      else{
+        $(thing).css('background', "url('./img/watch-carefully4.png')");
+      }
      }
 
      }, 5000);
@@ -318,10 +329,24 @@ function level12(){
       	function() {
       	    $('#header').text("Alright, now pick!");
       	    change = 1;
-     		$('.answer_button').css('background', 'white');
+              for (var i = 0; i < 4; i++) {
+          thing = '#answerL12-' + i;
+      if(thing == '#answerL12-0'){
+     		     $(thing).css('background', "url('./img/Button-1.png')");
+      }
+      else if(thing == '#answerL12-1'){
+        $(thing).css('background', "url('./img/Button-2.png')");
+      }
+      else if(thing == '#answerL12-2'){
+        $(thing).css('background', "url('./img/Button-3.png')");
+      }
+      else{
+        $(thing).css('background', "url('./img/Button-4.png')");
+      }
+    }
 
      
-    }, 5050); 
+    }, 5080); 
 
      $('.answer_button').click(function(){
      	if(change == 0){
@@ -354,8 +379,8 @@ $(document).ready(function() {
     $('.startIMG').empty();
     $('#word_lives').css('visibility','visible');
     $('#num_lives').css('visibility','visible');
-
-   question1();
+    state = 0;
+    question1();
   });
   $('#instructionsbtn').click(function(){
     $('#details').hide();
@@ -372,18 +397,19 @@ $(document).ready(function() {
     $('.game-window').append(info); 
     $('#word_lives').attr('src','img/Go_back.png');
     $('#word_lives').css('visibility','visible');
-    $('.lives').css('bottom','5%');
-    $('.lives').css('left','5%');
+    state = -1;
+
   });
 	$('#word_lives').click(function(){
+    if(state == -1){
     $('#details').show();
     $('.startIMG').show();
     $( ".text" ).remove();
     $('#header').text('The Impossibruuuuu Quiz')
      $('#word_lives').attr('src','img/Lives.png');
      $('#word_lives').css('visibility','hidden');
-    $('.lives').css('bottom','0');
-    $('.lives').css('left','0');
+   }
+ 
   });
 
 

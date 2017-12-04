@@ -1,5 +1,7 @@
 function level1() {
 	$('#header').append("What is 1 + 1");
+	  $('#q-number').css('visibility','visible');
+	  $('#q-number').attr('src','img/level13.png');
 	//$('.game-window').append("<div class='startImg'></div")
 
 	var answers = ['2','two','too','window']
@@ -34,6 +36,7 @@ function level1() {
 
 function level2() {
 	$('#header').text("PRESS ME");
+	  $('#q-number').attr('src','img/level14.png');
 	$('#details').hide();
 	$('.startIMG').empty();
 	var bigButton = "<input type='image' id='bigButton' src='img/arcade_green_half.png' width='360px' height='400px'/>"
@@ -52,6 +55,7 @@ function level2() {
 
 function level3() {
 	$('#header').text("Who am I?");
+	  $('#q-number').attr('src','img/level15.png');
 	$('#details').hide();
 	$('.startIMG').empty();
 	var hangman = "<input type='image' id='mark' src='img/mark.png' width='200px' height='200px'/>"
