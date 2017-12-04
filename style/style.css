@@ -115,12 +115,13 @@
 .lives{
 	/*visibility: hidden;*/
 	position:absolute;
-	bottom: 0;
-	left:0;
+	bottom: 5%;
+	left:5%;
 }
 
 #banana{
-	right: 0;
+	left: 35%;
+	top: 10%;
 	position:absolute;
 }
 
