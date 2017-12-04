@@ -447,8 +447,12 @@ function lost(){
 }
 
 function end() {
-	$('.game-window').append();
-	$('.game-window').append('<h1> You Win!!!!</h1>')
-	$('.game-window').append('<h1 onclick="level1()"> Play again!</h2>')
+	$('.game-window').append("<img class='win-screen' src='img/Win_Screen.png' style='position:absolute; left:-6; top:0;'>");
+	$('.game-window').append('<img class="win-screen" onclick="restart()" src="img/Play_again.png" style="position:absolute; left:45%; bottom:0;z-index:2; height:100px;">')
 
+}
+function restart(){
+	$('.win-screen').remove();
+	question1();
+	//reset score?
 }

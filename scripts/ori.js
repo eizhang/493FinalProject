@@ -2,6 +2,7 @@ state = 0;
 
 function question1() {
   console.log("question1!");
+   $('#q-number').attr('src','img/level1.png');
   $('#q-number').css('visibility','visible');
  // $('#header').css('display', 'none');
  //  $('#details').css('display', 'none');

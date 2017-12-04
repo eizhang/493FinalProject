@@ -382,7 +382,8 @@ $(document).ready(function() {
     $('#word_lives').css('visibility','visible');
     $('#num_lives').css('visibility','visible');
     state = 0;
-    question1();
+    //question1();
+    level3();
   });
   $('#instructionsbtn').click(function(){
     $('#details').hide();
