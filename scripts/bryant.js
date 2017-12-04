@@ -75,9 +75,9 @@ function level3() {
 		console.log($(this).attr('id'));
 		if($(this).attr('id') == 'answerL3-0'){
 			console.log('incorrect');
-		loseLives();
+			loseLives();
 			mark_count = 0;
-			var name = 'img/mark_'+mark_count+'.png';
+			var name = 'img/mark.png';
 		$('#mark').attr('src',name);
 		}
 		else if($(this).attr('id') == 'answerL3-1' && mark_count== 0 ){
@@ -109,7 +109,6 @@ function level3() {
 	 			console.log("YAY");
 	       		$('.startIMG').empty();
 		        $('.answer_button').empty();
-		       	
 		        $('#game-window').html("");
 		        $('#mark').remove();
 		        end();
@@ -121,7 +120,7 @@ function level3() {
 			console.log("wrong!");
 			loseLives();
 			mark_count = 0;
-			var name = 'img/mark_'+ mark_count+'.png';
+			var name = 'img/mark.png';
 			$('#mark').attr('src',name);
 		}
 
