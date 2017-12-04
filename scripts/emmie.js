@@ -172,8 +172,8 @@ function loseLives() {
 	$('#theImg').css('position','absolute');
 	$('#theImg').css('height','400');
 	$('#theImg').css('width','400');
-	$('#theImg').css('top','10%');
-	$('#theImg').css('left','15%');
+	$('#theImg').css('bottom','8%');
+	$('#theImg').css('left','30%');
 	
    
     setTimeout(function(){
@@ -447,7 +447,7 @@ function lost(){
 }
 
 function end() {
-	$('.game-window').empty();
+	$('.game-window').append();
 	$('.game-window').append('<h1> You Win!!!!</h1>')
 	$('.game-window').append('<h1 onclick="level1()"> Play again!</h2>')
 

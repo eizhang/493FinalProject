@@ -73,6 +73,7 @@ function level10(){
 console.log("Welcome to Level 6");
   $('#q-number').attr('src','img/level6.png');
  $('#header').text("What is this?");
+  $('#header').css('margin-right', '100');
 	  var answers = [
 	  	'Kiwi','Nectarine','Apple','Berry'
 	  ]
@@ -90,8 +91,8 @@ console.log("Welcome to Level 6");
         console.log(answers[i]);
         $('.startIMG').append(buttonsDiv);
      };
-      $('.answer_button1').css('top','35%');
-       $('.answer_button0').css('top','35%');
+      //$('.answer_button1').css('top','35%');
+      // $('.answer_button0').css('top','35%');
 
     // 	$('.startIMG').after("<br/>");
      	//$('.game-window').append("<img id='banana' src='img/Banana_0.png'></div>");
@@ -292,6 +293,7 @@ function level12(){
     $('#q-number').attr('src','img/level8.png');
 	var change = 0;
 	  $('#header').text("Watch Carefully.....");
+      $('#header').css('margin-right', '0');
 	  var answers = [
 	  	' ',' ',' ',' '
 	  ]
