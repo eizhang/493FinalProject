@@ -148,11 +148,11 @@ function question4() {
   $('.game-window').append('<p class="q4" id="hurry">Hurry up!</p>');
 
   var x = 10;
-  var y = setInterval(function() {
+  y = setInterval(function() {
     --x;
     if (x <= -1) {
       Incorrect();
-      clearInterval(x);
+      clearInterval(y);
       $('#hurry').css("visibility", "hidden");
       $('#timer').css("color", "black");
       x = 10;
@@ -183,6 +183,7 @@ function Pump() {
     $('#brain').attr("src","img/brain4.png");
   }
   if (w >= 350) {
+      clearInterval(y);
     win();
   }
   $('#bar').css("width", w+10);
