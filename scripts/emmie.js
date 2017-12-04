@@ -433,8 +433,9 @@ function CorrectMaze(){
 	$('.startIMG').append("<img class='fam' src='img/fam.jpg' style='left:30%; top:15%; height:400px; width:auto;'> <h2 class='fam'> Thanks! I've missed momma! </h2></img>");
 	setTimeout(function(){
 		$('.fam').remove();
-		end();
-	},1000);
+			Correct();
+	},2000);
+
 }
 
 function lost(){

@@ -76,8 +76,6 @@ console.log("Welcome to Level 10");
 	  ]
 	  $('#details').hide();
     $('.game-window').append("<img id='banana' src='img/Banana_0.png'></div>");
-    $('#banana').css('right','0');
-    $('#banana').css('top','0');
     $('#banana').css('height','200px');
     $('#banana').css('width','200px');
 	  $('.startIMG').empty();
