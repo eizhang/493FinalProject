@@ -66,12 +66,26 @@ function level2() {
 	var buttonTimeout = setTimeout(function(){
 		$('#header').text("GOOD PATIENCE");
 		//Correct();
+		$("p").remove();
 		level3(); 
+	}, 7000);
+	setTimeout(function() {
+		$('.game-window').append('<p id="p1">DO IT</p>')
+	}, 1000);
+	setTimeout(function() {
+		$('.game-window').append('<p id="p2">PRESS MEEEEEEE</p>')
+	}, 2000);
+	setTimeout(function() {
+		$('.game-window').append('<p id="p3">JUST PRESS IT</p>')
 	}, 3000);
+
+	setTimeout(function() {
+		$('.game-window').append('<p id="p4">YOU KNOW YOU WANT TO</p>')
+	}, 4000);
 	$('#bigButton').click(function() {
 		window.clearTimeout(buttonTimeout);
 		loseLives();
-		alert("DEAD");
+		level2(); 
 	});
 }
 
