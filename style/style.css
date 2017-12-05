@@ -10,6 +10,79 @@
 	font-family: chalkduster; 
 }
 
+#answerL3-0 {
+	height:105px;
+	width:110px;
+	background:url('../img/blue-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+#answerL3-1 {
+	height:104px;
+	width:99px;
+	background:url('../img/red-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+#answerL3-2 {
+	height:114px;
+	width:110px;
+	background:url('../img/teal-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+#answerL3-3 {
+	height:106px;
+	width:115px;
+	background:url('../img/orange-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+#answerL3-4 {
+	height:103px;
+	width:112px;
+	background:url('../img/purple-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+#answerL3-5 {
+	height:113px;
+	width:102px;
+	background:url('../img/green-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+#answerL3-6 {
+	height:112px;
+	width:118px;
+	background:url('../img/white-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+#answerL3-7 {
+	height:114px;
+	width:111px;
+	background:url('../img/yellow-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+#answerL3-8 {
+	height:114px;
+	width:112px;
+	background:url('../img/light-green-mini.png');
+	border:none;
+	font-family: chalkduster; 
+	font-size: 50px;
+}
+
 .answer_button0{
 	height:104px;
 	width:217px;
@@ -19,6 +92,14 @@
 	top:30%;
 	left:10%;
 
+}
+#mark{
+	height: 100px;
+	width: 100px;
+	position: static !important;
+	size: 50%;
+	display: block;
+    margin: auto;
 }
 .answer_button1{
 	height:105px;
