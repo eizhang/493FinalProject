@@ -131,7 +131,7 @@ function level3() {
 	 			console.log("YAY");
 	       		$('.startIMG').empty();
 		        $('.answer_button').empty();
-		        $('#  game-window').html("");
+		        $('#game-window').html("");
 		        $('#mark').remove();
 		        end();
 	    	},1000);
