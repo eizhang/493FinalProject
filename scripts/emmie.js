@@ -1,5 +1,5 @@
 var state = 13;
-
+var lives = 3;
 function level13(){
 	state = 13;
 	  $('#q-number').attr('src','img/level9.png');
@@ -159,6 +159,7 @@ function loseLives() {
 	--lives;
 	console.log('here');
 	if (state === 16) {
+		$('#header').empty();
 		$('.startIMG').empty();
 		colorMe();
 	}
@@ -215,7 +216,7 @@ var step = 0;
 function colorMe() {
 	step = 0;
 	$('.img').remove();
-  $('#q-number').attr('src','img/level12.png');
+  	$('#q-number').attr('src','img/level12.png');
 	$('#header').empty();
 	$('#header').text('Can you color a row port?');
 	$('#header').append('<br><h2 class="q16" id="q16-1" > R </h2>');
