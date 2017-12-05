@@ -44,14 +44,14 @@
   font-size: 30px;
   font-family: chalkduster; 
 }
-#mark {
+#qmark {
   position: absolute;
   left:65%;
   top:10%;
    font-size: 40px;
 }
 
-#mark:hover {
+#qmark:hover {
   color: yellow;
 }
 

@@ -283,7 +283,10 @@ function colorMePurple() {
 function colorMeTeal() {
 	if (step === 6){
 		$('#q16-7').css('color', 'teal');
-		clickCorrect();
+		setTimeout(function(){
+	      clickCorrect();
+		},1000);
+	
 
 	}
 	else{
