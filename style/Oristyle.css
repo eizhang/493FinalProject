@@ -6,7 +6,7 @@
   background: url("../img/bloo.png");
 }*/
 
-#a {
+/*#a {
   height: 150px;
   width: 150px;
   float:left;
@@ -22,20 +22,33 @@
   height: 150px;
   width: 150px;
   float:left;
-}
+}*/
 
 #d {
-	/*bottom: 0;
-	float: right;*/
-  background: url("../img/bloo.png");
-  height: 150px;
-  width: 150px;
-  padding-bottom: 120px;
-  float:left;
+  height:115px;
+  width:216px;
+  background:url('../img/Blue_Button.png');
+  border:none;
+  position: absolute;
+  top:60%;
+  left:60%;
+
 }
 
+.q1{
+  font-size: 30px;
+  font-family: chalkduster; 
+}
+
+.q2{
+  font-size: 30px;
+  font-family: chalkduster; 
+}
 #mark {
-  float: left;
+  position: absolute;
+  left:65%;
+  top:10%;
+   font-size: 40px;
 }
 
 #mark:hover {
@@ -72,8 +85,11 @@
 }
 
 #brainButton {
-  height: 50px;
-  width: 50px;
+    font-size: 30px;
+  font-family: chalkduster; 
+  width:  89px;
+  height: 65px;
+  background: url('../img/Book.png');
 }
 
 #bar {

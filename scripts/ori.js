@@ -3,7 +3,9 @@ state = 0;
 function question1() {
   console.log("question1!");
    $('#q-number').attr('src','img/level1.png');
+    $('#num_lives').attr('src','img/3_lives.png');
   $('#q-number').css('visibility','visible');
+  var lives= 3;
  // $('#header').css('display', 'none');
  //  $('#details').css('display', 'none');
  //  $('.startImg').css('display', 'none');
@@ -16,10 +18,45 @@ function question1() {
 	]
 
 		$('#header').text(question_1);
-		$('.game-window').append('<button class="q1" id="a" type="button" onclick="Incorrect()">' + answers_1[0] + '</button>');
-		$('.game-window').append('<button class="q1" id="b" type="button" onclick="Incorrect()">' + answers_1[1] + '</button>');
-		$('.game-window').append('<button class="q1" id="c" type="button" onclick="Correct()">' + answers_1[2] + '</button>');
-		$('.game-window').append('<button class="q1" id="d" type="button" onclick="Incorrect()">' + answers_1[3] + '</button>');
+		$('.startIMG').append('<button class="q1 answer_button0"  type="button" onclick="Incorrect()">' + answers_1[0] + '</button>');
+		$('.startIMG').append('<button class="q1 answer_button1"  type="button" onclick="Incorrect()">' + answers_1[1] + '</button>');
+		$('.startIMG').append('<button class="q1 answer_button2"  type="button" onclick="Correct()">' + answers_1[2] + '</button>');
+		$('.startIMG').append('<button class="q1 answer_button3" id = "d" type="button" onclick="Incorrect()">' + answers_1[3] + '</button>');
+
+
+$('.q1').hover(function() {
+        //mouse over
+        if($(this).text() == answers_1[0]){
+        $(this).css('background', "url('./img/Hover-1.png')");
+      }
+        else if($(this).text() == answers_1[1]){
+          $(this).css('background', "url('./img/Hover-2.png')");
+        }
+        else if($(this).text() == answers_1[2]){
+            $(this).css('background', "url('./img/Hover-3.png')");
+        }
+        else{
+            $(this).css('background', "url('./img/Blue-hover.png')");
+        }
+    }, function() {
+        //mouse out
+        if($(this).text() == answers_1[0]){
+        $(this).css('background', "url('./img/Button-1.png')");
+      }
+      else if($(this).text() == answers_1[1]){
+        $(this).css('background', "url('./img/Button-2.png')");
+      }
+      else if($(this).text() == answers_1[2]){
+        $(this).css('background', "url('./img/Button-3.png')");
+      }
+      else{
+        $(this).css('background', "url('./img/Blue_Button.png')");
+      }
+    });
+
+
+
+
 }
 
 function question2() {
@@ -34,15 +71,47 @@ function question2() {
 		"My cat got stuck in the blinds"
 	]
   $('#header').text(question_2);
-  $('#header').append('<h2 class="q2" id="mark">?</h2>');
-  $('.game-window').append('<br class="q2"><br class="q2"><br class="q2"><br class="q2">');
-  $('.game-window').append('<button class="q2" id="a" type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
-  $('.game-window').append('<button class="q2" id="b" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
-  $('.game-window').append('<button class="q2" id="c" type="button" onclick="Incorrect()">' + answers_2[2] + '</button>');
-  $('.game-window').append('<button class="q2" id="d" type="button" onclick="Incorrect()">' + answers_2[3] + '</button>');
+  $('#header').append('<h2 id="mark">?</h2>');
+
+  $('.startIMG').append('<button class="q2 answer_button0"  type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
+  $('.startIMG').append('<button class="q2 answer_button1" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
+  $('.startIMG').append('<button class="q2 answer_button2"  type="button" onclick="Incorrect()">' + answers_2[2] + '</button>');
+  $('.startIMG').append('<button class="q2 answer_button3"  type="button" onclick="Incorrect()">' + answers_2[3] + '</button>');
   $('#mark').click(function() {
     Correct();
   });
+
+   $('.q2').hover(function() {
+        //mouse over
+        if($(this).text() == answers_2[0]){
+        $(this).css('background', "url('./img/Hover-1.png')");
+      }
+        else if($(this).text() == answers_2[1]){
+          $(this).css('background', "url('./img/Hover-2.png')");
+        }
+        else if($(this).text() == answers_2[2]){
+            $(this).css('background', "url('./img/Hover-3.png')");
+        }
+        else{
+            $(this).css('background', "url('./img/Hover-4.png')");
+        }
+    }, function() {
+        //mouse out
+        if($(this).text() == answers_2[0]){
+        $(this).css('background', "url('./img/Button-1.png')");
+      }
+      else if($(this).text() == answers_2[1]){
+        $(this).css('background', "url('./img/Button-2.png')");
+      }
+      else if($(this).text() == answers_2[2]){
+        $(this).css('background', "url('./img/Button-3.png')");
+      }
+      else{
+        $(this).css('background', "url('./img/Button-4.png')");
+      }
+    });
+
+
 }
 function question3() {
   console.log("question3!");

@@ -442,8 +442,8 @@ function CorrectMaze(){
 }
 
 function lost(){
-	$('.game-window').empty();
-	$('.game-window').append('<h1> You Lose!!!!</h1>')
+	$('.game-window').append("<img class='win-screen' src='img/Loss_Screen.png' style='position:absolute; left:0; top:0;'>");
+	$('.game-window').append('<img class="win-screen" onclick="restart()" src="img/Try_again.png" style="position:absolute; left:35%; bottom: 25%;z-index:2; height:100px;">')
 }
 
 function end() {
@@ -453,6 +453,12 @@ function end() {
 }
 function restart(){
 	$('.win-screen').remove();
+	$('#details').hide();
+    $('.startIMG').empty();
+    $('#word_lives').css('visibility','visible');
+    $('#num_lives').css('visibility','visible');
+    $('#num_lives').css('visibility','visible');
+    state = 0;
 	question1();
 	//reset score?
 }
