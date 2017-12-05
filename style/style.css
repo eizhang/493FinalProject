@@ -11,72 +11,81 @@
 }
 
 #answerL3-0 {
-	height:105px;
-	width:110px;
+	margin : 10px;
+	height:48px;
+	width:51px;
 	background:url('../img/blue-mini.png');
 	border:none;
 	font-family: chalkduster; 
 	font-size: 50px;
 }
 #answerL3-1 {
-	height:104px;
-	width:99px;
+	margin : 10px;
+	height:53px;
+	width:50px;
 	background:url('../img/red-mini.png');
 	border:none;
 	font-family: chalkduster; 
 	font-size: 50px;
 }
 #answerL3-2 {
-	height:114px;
-	width:110px;
+	height:52px;
+	margin : 10px;
+	width:50px;
 	background:url('../img/teal-mini.png');
 	border:none;
 	font-family: chalkduster; 
 	font-size: 50px;
 }
 #answerL3-3 {
-	height:106px;
-	width:115px;
+	margin : 10px;
+	height:46px;
+	width:50px;
 	background:url('../img/orange-mini.png');
 	border:none;
 	font-family: chalkduster; 
 	font-size: 50px;
 }
 #answerL3-4 {
-	height:103px;
-	width:112px;
+	margin : 10px;
+	height:47px;
+	width:51px;
 	background:url('../img/purple-mini.png');
 	border:none;
 	font-family: chalkduster; 
 	font-size: 50px;
 }
 #answerL3-5 {
-	height:113px;
-	width:102px;
+	margin : 10px;
+	height:56px;
+	width:50px;
 	background:url('../img/green-mini.png');
 	border:none;
 	font-family: chalkduster; 
 	font-size: 50px;
 }
 #answerL3-6 {
-	height:112px;
-	width:118px;
+	margin : 10px;
+	height:47px;
+	width:50px;
 	background:url('../img/white-mini.png');
 	border:none;
 	font-family: chalkduster; 
 	font-size: 50px;
 }
 #answerL3-7 {
-	height:114px;
-	width:111px;
+	margin : 10px;
+	height:52px;
+	width:50px;
 	background:url('../img/yellow-mini.png');
 	border:none;
 	font-family: chalkduster; 
 	font-size: 50px;
 }
 #answerL3-8 {
-	height:114px;
-	width:112px;
+	margin : 10px;
+	height:49px;
+	width:50px;
 	background:url('../img/light-green-mini.png');
 	border:none;
 	font-family: chalkduster; 
