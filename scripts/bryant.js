@@ -7,17 +7,39 @@ function level1() {
 	var answers = ['2','two','too','window']
 	console.log(answers.length);
 	   for (var i = 0; i < 4; i++) {
-        var buttonsDiv = "<button id='answerL1-'" + i + "' class='answer_button'>"+answers[i]+"</button>";
+        var buttonsDiv = "<button id='answerL1-'" + i + "' class='answer_button L1 answer_button"+i+"'>"+answers[i]+"</button>";
         console.log(answers[i]);
         $('.startImg').append(buttonsDiv);
      };
 
-     $('.answer_button').hover(function() {
+   $('.answer_button').hover(function() {
         //mouse over
-        $(this).css('background', '#ff0')
+        if($(this).text() == answers[0]){
+        $(this).css('background', "url('./img/Hover-1.png')");
+      }
+        else if($(this).text() == answers[1]){
+          $(this).css('background', "url('./img/Hover-2.png')");
+        }
+        else if($(this).text() == answers[2]){
+            $(this).css('background', "url('./img/Hover-3.png')");
+        }
+        else{
+            $(this).css('background', "url('./img/Hover-4.png')");
+        }
     }, function() {
         //mouse out
-        $(this).css('background', 'white')
+        if($(this).text() == answers[0]){
+        $(this).css('background', "url('./img/Button-1.png')");
+      }
+      else if($(this).text() == answers[1]){
+        $(this).css('background', "url('./img/Button-2.png')");
+      }
+      else if($(this).text() == answers[2]){
+        $(this).css('background', "url('./img/Button-3.png')");
+      }
+      else{
+        $(this).css('background', "url('./img/Button-4.png')");
+      }
     });
 
      $('.answer_button').click(function(){
@@ -109,7 +131,7 @@ function level3() {
 	 			console.log("YAY");
 	       		$('.startIMG').empty();
 		        $('.answer_button').empty();
-		        $('#game-window').html("");
+		        $('#  game-window').html("");
 		        $('#mark').remove();
 		        end();
 	    	},1000);

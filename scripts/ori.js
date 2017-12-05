@@ -119,10 +119,10 @@ function question3() {
   $('.q2').remove();
   var question_3 = "Pick the best team!";
  $('#header').text(question_3);
-  $('.game-window').append('<img class="q3" id="mich" src="img/michigan.png"></img><br class="q3"><br class="q3">');
-  $('.game-window').append('<img class="q3" id="osu" src="img/osu.png"></img><br class="q3"><br class="q3">');
-  $('.game-window').append('<img class="q3" id="minn" src="img/minn.png"></img><br class="q3"><br class="q3">');
-  $('.game-window').append('<img class="q3" id="penn" src="img/penn.png"></img>');
+  $('.startIMG').append('<img class="q3" id="mich" style="position:absolute;" src="img/michigan.png"></img><br class="q3"><br class="q3">');
+  $('.startIMG').append('<img class="q3" id="osu" src="img/osu.png"></img><br class="q3"><br class="q3">');
+  $('.startIMG').append('<img class="q3" id="minn" src="img/minn.png"></img><br class="q3"><br class="q3">');
+  $('.startIMG').append('<img class="q3" id="penn" src="img/penn.png"></img>');
   let width = $('.game-window').width() - 75;
   $('#osu').css('left',width);
   $('#penn').css('left',width);
@@ -212,14 +212,14 @@ function question4() {
   $('.q3').remove();
   var question_4 = "Click to cram for the EECS 493 exam!";
   $('#header').text(question_4);
-  $('.game-window').append('<button class="q4" id="brainButton" type="button" onclick="Pump()">Study!</button>');
-  $('.game-window').append('<img class="q4" id="bar" src="img/greenbar.png"></img>');
-  $('.game-window').append('<img class="q4" id="brain" src="img/brain1.png"></img><br class="q4"><br class="q4">');
-  $('.game-window').append('<img class="q4" id="widgetHome" src="img/widgethome.png" style="visibility: hidden"></img>');
-  $('.game-window').append('<img class="q4" id="jquery" src="img/jquery.png" style="visibility: hidden"></img>');
-  $('.game-window').append('<img class="q4" id="angular" src="img/angular.png" style="visibility: hidden"></img>');
-  $('.game-window').append('<button class="q4" id="timer" type="button" disabled>10</button>');
-  $('.game-window').append('<p class="q4" id="hurry">Hurry up!</p>');
+  $('.startIMG').append('<button class="q4" id="brainButton" type="button" onclick="Pump()">Study!</button>');
+  $('.startIMG').append('<img class="q4" id="bar" src="img/greenbar.png"></img>');
+  $('.startIMG').append('<img class="q4" id="brain" src="img/brain1.png"></img><br class="q4"><br class="q4">');
+  $('.startIMG').append('<img class="q4" id="widgetHome" src="img/widgethome.png" style="visibility: hidden"></img>');
+  $('.startIMG').append('<img class="q4" id="jquery" src="img/jquery.png" style="visibility: hidden"></img>');
+  $('.startIMG').append('<img class="q4" id="angular" src="img/angular.png" style="visibility: hidden"></img>');
+  $('.startIMG').append('<button class="q4" id="timer" type="button" disabled>10</button>');
+  $('.startIMG').append('<p class="q4" id="hurry">Hurry up!</p>');
 
   var x = 10;
   y = setInterval(function() {
@@ -244,6 +244,7 @@ function question4() {
 
 function Pump() {
   let w = $('#bar').width();
+  console.log(w);
   if (w >= 100) {
     $('#widgetHome').css("visibility", "visible");
     $('#brain').attr("src","img/brain2.png");
@@ -257,7 +258,7 @@ function Pump() {
     $('#brain').attr("src","img/brain4.png");
   }
   if (w >= 350) {
-      clearInterval(y);
+    clearInterval(y);
     win();
   }
   $('#bar').css("width", w+10);
