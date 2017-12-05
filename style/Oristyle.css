@@ -61,27 +61,31 @@
 }
 
 #mich {
+  top:30%;
   height: 50px;
   width: 75px;
-  position: relative;
+  /*position: relative;*/
 }
 
 #osu {
+   top:45%;
   height: 50px;
   width: 75px;
-  position: relative;
+  position: absolute;
 }
 
 #minn {
+   top:60%;
   height: 50px;
   width: 75px;
-  position: relative;
+  position: absolute;
 }
 
 #penn {
+   top:75%;
   height: 50px;
   width: 75px;
-  position: relative;
+  position: absolute;
 }
 
 #brainButton {

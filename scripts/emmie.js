@@ -1,5 +1,5 @@
 var state = 13;
-var lives= 3;
+
 function level13(){
 	state = 13;
 	  $('#q-number').attr('src','img/level9.png');
@@ -235,16 +235,10 @@ function colorMe() {
 	$('.startIMG').append('<div class="boxed" id="q16-19" onclick="colorMeRed()"><a/></div><br>');	
 	$('.q16').css('display', 'inline-table');
 	$('.boxed').css('display','inline-table');
-	$('.boxed').css('height','50px');
-	$('.boxed').css('width','50px');
-	$('#q16-11').css('background-color', 'blue');
-	$('#q16-12').css('background-color', 'orange');
-	$('#q16-13').css('background-color', 'green');
-	$('#q16-15').css('background-color', 'yellow');
-	$('#q16-16').css('background-color', 'purple');
-	$('#q16-17').css('background-color', 'white');
-	$('#q16-18').css('background-color', 'teal');
-	$('#q16-19').css('background-color', 'red');
+	
+	
+	
+
 
 }
 
