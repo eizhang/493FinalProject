@@ -71,13 +71,13 @@ function question2() {
 		"My cat got stuck in the blinds"
 	]
   $('#header').text(question_2);
-  $('#header').append('<h2 id="mark">?</h2>');
+  $('#header').append('<h2 id="qmark">?</h2>');
 
   $('.startIMG').append('<button class="q2 answer_button0"  type="button" onclick="Incorrect()">' + answers_2[0] + '</button>');
   $('.startIMG').append('<button class="q2 answer_button1" type="button" onclick="Incorrect()">' + answers_2[1] + '</button>');
   $('.startIMG').append('<button class="q2 answer_button2"  type="button" onclick="Incorrect()">' + answers_2[2] + '</button>');
   $('.startIMG').append('<button class="q2 answer_button3"  type="button" onclick="Incorrect()">' + answers_2[3] + '</button>');
-  $('#mark').click(function() {
+  $('#qmark').click(function() {
     Correct();
   });
 
@@ -123,7 +123,7 @@ function question3() {
   $('.startIMG').append('<img class="q3" id="osu" src="img/osu.png"></img><br class="q3"><br class="q3">');
   $('.startIMG').append('<img class="q3" id="minn" src="img/minn.png"></img><br class="q3"><br class="q3">');
   $('.startIMG').append('<img class="q3" id="penn" src="img/penn.png"></img>');
-  let width = $('.game-window').width() - 75;
+  let width = $('.game-window').width()-75;
   $('#osu').css('left',width);
   $('#penn').css('left',width);
 
@@ -212,6 +212,7 @@ function question4() {
   $('.q3').remove();
   var question_4 = "Click to cram for the EECS 493 exam!";
   $('#header').text(question_4);
+
   $('.startIMG').append('<button class="q4" id="brainButton" type="button" onclick="Pump()">Study!</button>');
   $('.startIMG').append('<img class="q4" id="bar" src="img/greenbar.png"></img>');
   $('.startIMG').append('<img class="q4" id="brain" src="img/brain1.png"></img><br class="q4"><br class="q4">');
@@ -220,7 +221,8 @@ function question4() {
   $('.startIMG').append('<img class="q4" id="angular" src="img/angular.png" style="visibility: hidden"></img>');
   $('.startIMG').append('<button class="q4" id="timer" type="button" disabled>10</button>');
   $('.startIMG').append('<p class="q4" id="hurry">Hurry up!</p>');
-
+ $('#brainButton').css('left','0');
+ 
   var x = 10;
   y = setInterval(function() {
     --x;
