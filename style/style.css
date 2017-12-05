@@ -223,8 +223,12 @@
 .startButton, .startImg {
 	text-align: center;
 }
+p {
+	cursor: pointer;
+}
 
 #p1{
+	visibility: hidden;
 	color: red;
 	position: absolute;
 	top: 10px;
@@ -233,6 +237,7 @@
 	font-family: chalkduster; 	
 }
 #p2{
+	visibility: hidden;
 	color: red;
 	position: absolute;
 	-webkit-transform: rotate(7deg);
@@ -243,6 +248,7 @@
 }
 
 #p3{
+	visibility: hidden;
 	color: red;
 	position: absolute;
 	-webkit-transform: rotate(-7deg);
@@ -253,6 +259,7 @@
 }
 
 #p4{
+	visibility: hidden;
 	color: red;
 	position: absolute;
 	bottom: 10px;

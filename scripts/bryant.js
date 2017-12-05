@@ -63,26 +63,39 @@ function level2() {
 	$('.startIMG').empty();
 	var bigButton = "<input type='image' id='bigButton' src='img/arcade_green_half.png' width='360px' height='400px'/>"
 	$('.startIMG').append(bigButton); 
+	$('.game-window').append('<p id="p4">YOU KNOW YOU WANT TO</p>')
+	$('.game-window').append('<p id="p3">JUST PRESS IT</p>')
+	$('.game-window').append('<p id="p2">PRESS MEEEEEEE</p>')
+	$('.game-window').append('<p id="p1">DO IT</p>')
 	var buttonTimeout = setTimeout(function(){
-		$('#header').text("GOOD PATIENCE");
 		//Correct();
 		$("p").remove();
 		level3(); 
 	}, 7000);
 	setTimeout(function() {
-		$('.game-window').append('<p id="p1">DO IT</p>')
+		$("#p1").css("visibility","visible");
 	}, 1000);
 	setTimeout(function() {
-		$('.game-window').append('<p id="p2">PRESS MEEEEEEE</p>')
+		$("#p2").css("visibility","visible");
 	}, 2000);
 	setTimeout(function() {
-		$('.game-window').append('<p id="p3">JUST PRESS IT</p>')
+		$("#p3").css("visibility","visible");
 	}, 3000);
 
 	setTimeout(function() {
-		$('.game-window').append('<p id="p4">YOU KNOW YOU WANT TO</p>')
+		$("#p4").css("visibility","visible");
 	}, 4000);
+
 	$('#bigButton').click(function() {
+		window.clearTimeout(buttonTimeout);
+		loseLives();
+		level2(); 
+	});
+	$("p").click(function() {
+		$("#p4").css("visibility","hidden");
+		$("#p2").css("visibility","hidden");
+		$("#p3").css("visibility","hidden");
+		$("#p1").css("visibility","hidden");
 		window.clearTimeout(buttonTimeout);
 		loseLives();
 		level2(); 

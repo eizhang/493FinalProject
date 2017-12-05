@@ -12,6 +12,9 @@ Question 6: Can you not
 Question 7: Click the squirrel
 Question 8: red-orange-white-purple-orange-red-teal
 Question 9: click on baby corgi, follow path with mouse cursor, click momma corgi
+Question 10: Window
+Question 11: Pause and don't click anything for 7 seconds 
+Question 12: LEGEND
 
 Game over!! 
 
