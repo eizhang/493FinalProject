@@ -169,6 +169,9 @@ function loseLives() {
 		$('#endMaze').remove();
 		startMaze();
 	}
+	if (state == 5){
+		 $('#banana').remove();
+	}
 	$('.startIMG').append($('<img>',{id:'theImg',src:'img/loss_life.png'}));
 	$('#theImg').css('position','absolute');
 	$('#theImg').css('height','400');
