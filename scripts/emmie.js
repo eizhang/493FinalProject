@@ -460,6 +460,7 @@ function restart(){
     $('#num_lives').css('visibility','visible');
     $('#num_lives').css('visibility','visible');
     state = 0;
+    lives = 3;
 	question1();
 	//reset score?
 }
