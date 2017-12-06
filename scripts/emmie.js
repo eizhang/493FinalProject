@@ -169,10 +169,24 @@ function loseLives() {
 		$('#endMaze').remove();
 		startMaze();
 	}
-	if (state == 5){
+
+	
+
+	if (lives < 1){
+		//render game over screen
+		if (state == 5){
 		 $('#banana').remove();
 	}
+	   if (state == 6){
+	   	console.log('here');
+		  $('.Disney').remove();
+		  game =0;
+	   }
+		lost();
+	}
+	else{
 	$('.startIMG').append($('<img>',{id:'theImg',src:'img/loss_life.png'}));
+	$('#theImg').css('z-index','3');
 	$('#theImg').css('position','absolute');
 	$('#theImg').css('height','400');
 	$('#theImg').css('width','400');
@@ -189,10 +203,6 @@ function loseLives() {
 	setTimeout(function(){
 		$('#theImg').remove();
 	},1000);
-
-	if (lives < 1){
-		//render game over screen
-		lost();
 	}
 
 }

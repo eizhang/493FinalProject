@@ -266,11 +266,11 @@ function level11(){
         Correct();
     }
     else{
-    	
+    	$('.Disney').remove();
+      game = 1;
       loseLives();
     	console.log('incorrect');
-    	$('.Disney').remove();
-    	game = 1;
+
 
     }
 
