@@ -2,7 +2,7 @@ var state = 13;
 var lives = 3;
 function level13(){
 	state = 13;
-	  $('#q-number').attr('src','img/level9.png');
+	$('#q-number').attr('src','img/level9.png');
 	$('#word_lives').css('visibility', 'visible');
 	$('#num_lives').css('visibility', 'visible');
 	$('#details').css('display', 'none');
@@ -328,8 +328,8 @@ function colorMeRed() {
 
 function startMaze() {
 	$('#header').empty();
-	$('#header').append('<h3 id="startMsg">Click the pupper! </h3>')
-	$('.startIMG').append('<img id="startMaze" src= "img/corgi.jpg" onclick="maze()"></img>');
+	$('#header').append('<h3 id="startMsg">Go to the pupper! </h3>')
+	$('.startIMG').append('<img id="startMaze" src= "img/corgi.jpg" onmouseover="maze()"></img>');
 	$('#startMaze').css({
 		'position' : 'absolute',
 		'bottom' : '42%',
@@ -339,7 +339,7 @@ function startMaze() {
 
 function maze() {
 	$('#startMsg').remove();
-	  $('#q-number').css('visibility','hidden');
+	$('#q-number').css('visibility','hidden');
 	$('.startIMG').append('<div class="maze" id="maze_1" onmouseover="loseLives()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_2" onmouseover="loseLives()">Do not touch the green!!!</div>');
 	$('.startIMG').append('<div class="maze" id="maze_3" onmouseover="loseLives()"><a/></div>');
@@ -347,7 +347,7 @@ function maze() {
 	$('.startIMG').append('<div class="maze" id="maze_5" onmouseover="loseLives()"><h2>Show baby corgi how to get to momma corgi through the forest!</h2></div>');
 	$('.startIMG').append('<div class="maze" id="maze_6" onmouseover="loseLives()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_7" onmouseover="loseLives()"><a/></div>');
-	$('.startIMG').append('<img id="endMaze" src="img/mom.jpg" onclick="CorrectMaze()"/>');
+	$('.startIMG').append('<img id="endMaze" src="img/mom.jpg" onmouseover="CorrectMaze()"/>');
 	$('.startIMG').append('<div class="maze" id="maze_8" onmouseover="loseLives()"><a/></div>');
 	$('.startIMG').append('<div class="maze" id="maze_9" onmouseover="loseLives()"><a/></div>');
 	$('#endMaze').css({
