@@ -365,9 +365,12 @@ function level12(){
      	}
      	else{
      		console.log("incorrect");
-    
         loseLives();
      		change = 0;
+        setTimeout(function(){
+          level12();
+        },1000);
+        
      	}
      }
      });
