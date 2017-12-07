@@ -329,6 +329,7 @@ function level12(){
 
      setTimeout(
       	function() {
+          if (state == 7){
       	    $('#header').text("Alright, now pick!");
       	    change = 1;
               for (var i = 0; i < 4; i++) {
@@ -346,6 +347,7 @@ function level12(){
         $(thing).css('background', "url('./img/Button-4.png')");
       }
     }
+  }
 
      
     }, 5080); 
