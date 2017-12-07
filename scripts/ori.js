@@ -272,44 +272,46 @@ function win() {
 }
 
 function Correct() {
-  ++state;
-  switch (state) {
-    case 1:
-        question2();
-      break;
-    case 2:
-        question3();
-      break;
-    case 3:
-        question4();
-      break;
-    case 4:
-        level9();
-      break;
-    case 5:
-      level10();
-      break;
-    case 6:
-      level11();
-      break;
-    case 7:
-      level12();
-      break;
-    case 8:
-      level13();
-      break;
-     case 18:
-      level1();
-      break;
-    case 19:
-      level2();
-      break;
-    case 20:
-      level3();
-      break; 
-    default:
-      break;
-  }
+  console.log(state);
+  clickCorrect();
+  // ++state;
+  // switch (state) {
+  //   case 1:
+  //       question2();
+  //     break;
+  //   case 2:
+  //       question3();
+  //     break;
+  //   case 3:
+  //       question4();
+  //     break;
+  //   case 4:
+  //       level9();
+  //     break;
+  //   case 5:
+  //     level10();
+  //     break;
+  //   case 6:
+  //     level11();
+  //     break;
+  //   case 7:
+  //     level12();
+  //     break;
+  //   case 8:
+  //     level13();
+  //     break;
+  //    case 18:
+  //     level1();
+  //     break;
+  //   case 19:
+  //     level2();
+  //     break;
+  //   case 20:
+  //     level3();
+  //     break; 
+  //   default:
+  //     break;
+  // }
 
 }
 
