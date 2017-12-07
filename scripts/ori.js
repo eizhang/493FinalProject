@@ -246,7 +246,6 @@ function question4() {
 
 function Pump() {
   let w = $('#bar').width();
-  console.log(w);
   if (w >= 100) {
     $('#widgetHome').css("visibility", "visible");
     $('#brain').attr("src","img/brain2.png");
@@ -261,14 +260,14 @@ function Pump() {
   }
   if (w >= 350) {
     clearInterval(y);
-    win();
-  }
+        win();
+   }
   $('#bar').css("width", w+10);
 }
 
 function win() {
-  $('.q4').remove();
   Correct();
+
 }
 
 function Correct() {

@@ -46,23 +46,26 @@ state =4;
         $(this).css('background', "url('./img/Button-4.png')");
       }
     });
-     
-
+ 
+  
      $('.answer_button').click(function(){
-
+      console.log(next);
+        if(next == 1){
      	if($(this).text() == 'H'){
      		console.log("correct");
         $('.startIMG').empty();
         $('.answer_button').empty();
+        next = 0;
         Correct();
      	}
      	else{
      		console.log("incorrect");
      		
         loseLives();
-
+          }
      	}
      });
+   
 	  
 
 
@@ -388,6 +391,7 @@ $(document).ready(function() {
     $('#num_lives').css('visibility','visible');
     state = 0;
     lives= 3;
+    next = 0;
     question1();
 
   });

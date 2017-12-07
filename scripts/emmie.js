@@ -143,10 +143,13 @@ function clickCorrect() {
       break;
     case 4:
     	setTimeout(function(){
-    		level9();
-    	}, 800);
-        
-      break;
+    	  next = 1;
+
+    	},800); 
+    	 $('.q4').remove();
+           level9();
+    	break;
+      
     case 5:
       level10();
       break;
@@ -233,6 +236,7 @@ function loseLives() {
 	}
 
 	if (lives < 1){
+		next = 0;
 		//render game over screen
 		if (state == 5){
 		 $('#banana').remove();
