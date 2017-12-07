@@ -1,4 +1,4 @@
-state = 0;
+
 
 function question1() {
   console.log("question1!");
@@ -126,6 +126,8 @@ function question3() {
   let width = $('.game-window').width()-75;
   $('#osu').css('left',width);
   $('#penn').css('left',width);
+  $('#mich').css('left',0);
+  $('#minn').css('left',0);
 
     function first() {
       $("#mich").animate({
@@ -173,10 +175,10 @@ function question3() {
     });
     $('#osu').click(function() {
       Incorrect();
-      $('#mich').finish();
+      /*$('#mich').finish();
       $('#osu').finish();
       $('#minn').finish();
-      $('#penn').finish();
+      $('#penn').finish();*/
       $('#mich').css('left',0);
       $('#osu').css('left',width);
       $('#minn').css('left',0);
@@ -184,10 +186,10 @@ function question3() {
     });
     $('#minn').click(function() {
       Incorrect();
-      $('#mich').finish();
+      /*$('#mich').finish();
       $('#osu').finish();
       $('#minn').finish();
-      $('#penn').finish();
+      $('#penn').finish();*/
       $('#mich').css('left',0);
       $('#osu').css('left',width);
       $('#minn').css('left',0);
@@ -195,10 +197,10 @@ function question3() {
     });
     $('#penn').click(function() {
       Incorrect();
-      $('#mich').finish();
+      /*$('#mich').finish();
       $('#osu').finish();
       $('#minn').finish();
-      $('#penn').finish();
+      $('#penn').finish();*/
       $('#mich').css('left',0);
       $('#osu').css('left',width);
       $('#minn').css('left',0);
