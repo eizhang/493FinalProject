@@ -142,7 +142,10 @@ function clickCorrect() {
         question4();
       break;
     case 4:
-        level9();
+    	setTimeout(function(){
+    		level9();
+    	}, 800);
+        
       break;
     case 5:
       level10();
