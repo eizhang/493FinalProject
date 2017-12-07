@@ -1,7 +1,7 @@
-var state = 13;
-var lives = 3;
+// var state = 13;
+// var lives = 3;
+var timeout = false;
 function level13(){
-	state = 13;
 	$('#q-number').attr('src','img/level9.png');
 	$('#word_lives').css('visibility', 'visible');
 	$('#num_lives').css('visibility', 'visible');
@@ -56,7 +56,7 @@ function level13(){
     $('.answer_button').click(function(){
 
      	if($(this).text() == 'behind you'){
-	     		console.log("correct");
+	     	console.log("correct");
 	        $('.startIMG').empty();
 	        clickCorrect();
      	}
@@ -126,51 +126,108 @@ function subLevel() {
 }
 
 function clickCorrect() {
-	console.log("correct!");
-	if (state === 13){
-		state = 14;
-
+	if (timeout){
+		return;
+	}
+	++state;
+	console.log(state);
+	switch (state) {
+    case 1:
+        question2();
+      break;
+    case 2:
+        question3();
+      break;
+    case 3:
+        question4();
+      break;
+    case 4:
+        level9();
+      break;
+    case 5:
+      level10();
+      break;
+    case 6:
+      level11();
+      break;
+    case 7:
+      level12();
+      break;
+    case 8:
+      level13();
+      break;
+    case 9:
 		subLevel();
-		return;
-	}
-	if (state === 14){
-		//search for the right picture
-		state = 15;
+		break;
+	case 10:
 		search();
-		return;
-	}
-	if (state === 15){
-		++state;
+		break;
+	case 11:
 		colorMe();
-		return;
-		//maze question, with two buttons (start, end)
-		//mouse cant touch color. 
-	}
-	if (state === 16){
-		++state;
+		break;
+	case 12:
 		$('.q16').remove();
 		$('.boxed').remove();
 		startMaze();
-	}
-	//render next question 
+		break;
+    case 13:
+      level1();
+      break;
+    case 14:
+      level2();
+      break;
+    case 15:
+      level3();
+      break; 
+    default:
+      break;
+  }
+	// console.log("time clickCorrect = " + timeout);
+	// if (state === 12){
+	// 	state = 14;
+
+	// 	subLevel();
+	// 	return;
+	// }
+	// if (state === 14){
+	// 	//search for the right picture
+	// 	state = 15;
+	// 	search();
+	// 	return;
+	// }
+	// if (state === 15){
+	// 	++state;
+	// 	colorMe();
+	// 	return;
+	// 	//maze question, with two buttons (start, end)
+	// 	//mouse cant touch color. 
+	// }
+	// if (state === 16){
+	// 	++state;
+	// 	$('.q16').remove();
+	// 	$('.boxed').remove();
+	// 	startMaze();
+	// }
+	// //render next question 
 }
 
 function loseLives() {
+	console.log("time loseLives = " + timeout);
+	if (timeout){
+		return;
+	}
 	--lives;
-	console.log('here');
-	if (state === 16) {
+	if (state === 11) {
 		$('#header').empty();
 		$('.startIMG').empty();
 		colorMe();
 	}
-	if (state === 17) {
+	if (state === 12) {
 		$('.maze').remove();
 		$('#startMaze').remove();
 		$('#endMaze').remove();
 		startMaze();
 	}
-
-	
 
 	if (lives < 1){
 		//render game over screen
@@ -185,24 +242,26 @@ function loseLives() {
 		lost();
 	}
 	else{
-	$('.startIMG').append($('<img>',{id:'theImg',src:'img/loss_life.png'}));
-	$('#theImg').css('z-index','3');
-	$('#theImg').css('position','absolute');
-	$('#theImg').css('height','400');
-	$('#theImg').css('width','400');
-	$('#theImg').css('bottom','8%');
-	$('#theImg').css('left','30%');
-	
-   
-    setTimeout(function(){
-		var name = 'img/'+lives+'_lives.png'
-		$('#num_lives').attr('src',name);
-	},500);
-   
+		timeout = true;
+		$('.startIMG').append($('<img>',{id:'theImg',src:'img/loss_life.png'}));
+		$('#theImg').css('z-index','3');
+		$('#theImg').css('position','absolute');
+		$('#theImg').css('height','400');
+		$('#theImg').css('width','400');
+		$('#theImg').css('bottom','8%');
+		$('#theImg').css('left','30%');
+		
+	   console.log("time loseLives = " + timeout);
+	    setTimeout(function(){
+			var name = 'img/'+lives+'_lives.png'
+			$('#num_lives').attr('src',name);
+		},500);
+	   
 
-	setTimeout(function(){
-		$('#theImg').remove();
-	},1000);
+		setTimeout(function(){
+			timeout = false;
+			$('#theImg').remove();
+		},1000);
 	}
 
 }
@@ -328,6 +387,7 @@ function colorMeRed() {
 
 function startMaze() {
 	$('#header').empty();
+	$('#q-number').attr('src','img/level13.png');
 	$('#header').append('<h3 id="startMsg">Go to the pupper! </h3>')
 	$('.startIMG').append('<img id="startMaze" src= "img/corgi.jpg" onmouseover="maze()"></img>');
 	$('#startMaze').css({

@@ -1,7 +1,7 @@
 function level1() {
 	$('#header').append("What is 1 + 1");
 	  $('#q-number').css('visibility','visible');
-	  $('#q-number').attr('src','img/level13.png');
+	  $('#q-number').attr('src','img/level14.png');
 	//$('.game-window').append("<div class='startImg'></div")
 
 	var answers = ['2','two','too','window']
@@ -47,8 +47,7 @@ function level1() {
      	if($(this).text() == 'window'){
      		$('.startIMG').empty();
 	        $('.answer_button').empty();
-	        level2();
-	        //Correct();
+	        Correct();
      	}
      	else{
      		loseLives();
@@ -58,7 +57,7 @@ function level1() {
 
 function level2() {
 	$('#header').text("PRESS ME");
-	  $('#q-number').attr('src','img/level14.png');
+	  $('#q-number').attr('src','img/level15.png');
 	$('#details').hide();
 	$('.startIMG').empty();
 	var bigButton = "<input type='image' id='bigButton' src='img/arcade_green_half.png' width='360px' height='400px'/>"
@@ -70,7 +69,8 @@ function level2() {
 	var buttonTimeout = setTimeout(function(){
 		//Correct();
 		$("p").remove();
-		level3(); 
+		//level3(); 
+		Correct();
 	}, 7000);
 	setTimeout(function() {
 		$("#p1").css("visibility","visible");
@@ -89,7 +89,7 @@ function level2() {
 	$('#bigButton').click(function() {
 		window.clearTimeout(buttonTimeout);
 		loseLives();
-		level2(); 
+		//level2(); 
 	});
 	$("p").click(function() {
 		$("#p4").css("visibility","hidden");
@@ -98,13 +98,13 @@ function level2() {
 		$("#p1").css("visibility","hidden");
 		window.clearTimeout(buttonTimeout);
 		loseLives();
-		level2(); 
+		//level2(); 
 	});
 }
 
 function level3() {
 	$('#header').text("Who am I?");
-	  $('#q-number').attr('src','img/level15.png');
+	  $('#q-number').attr('src','img/level16.png');
 	$('#details').hide();
 	$('.startIMG').empty();
 	var hangman = "<input type='image' id='mark' src='img/mark.png' width='200px' height='200px'/>"
