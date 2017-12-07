@@ -220,14 +220,14 @@
 	position:absolute;
 }
 
-.startButton, .startImg {
+.startButton, .startImg, .bigbtn {
 	text-align: center;
 }
 p {
 	cursor: pointer;
 }
 
-#p1{
+/*#p1{
 	visibility: hidden;
 	color: red;
 	position: absolute;
@@ -266,3 +266,5 @@ p {
 	font-size: 60px;
 	font-family: chalkduster; 	
 }
+
+*/

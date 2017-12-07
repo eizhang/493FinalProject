@@ -1,7 +1,7 @@
 function level1() {
 	$('#header').append("What is 1 + 1");
-	  $('#q-number').css('visibility','visible');
-	  $('#q-number').attr('src','img/level14.png');
+	$('#q-number').css('visibility','visible');
+	$('#q-number').attr('src','img/level14.png');
 	//$('.game-window').append("<div class='startImg'></div")
 
 	var answers = ['2','two','too','window']
@@ -57,48 +57,60 @@ function level1() {
 
 function level2() {
 	$('#header').text("PRESS ME");
-	  $('#q-number').attr('src','img/level15.png');
+	$('#q-number').attr('src','img/level15.png');
 	$('#details').hide();
-	$('.startIMG').empty();
+	$('.game-window').append('<div class="bigbtn"></div>');
+	$('.bigbtn').empty();
 	var bigButton = "<input type='image' id='bigButton' src='img/arcade_green_half.png' width='360px' height='400px'/>"
-	$('.startIMG').append(bigButton); 
-	$('.game-window').append('<p id="p4">YOU KNOW YOU WANT TO</p>')
-	$('.game-window').append('<p id="p3">JUST PRESS IT</p>')
-	$('.game-window').append('<p id="p2">PRESS MEEEEEEE</p>')
-	$('.game-window').append('<p id="p1">DO IT</p>')
+	$('.bigbtn').append(bigButton); 
+	$('.game-window').append('<p id="p4" style="visibility:hidden;color: red;position: absolute;top: 10px;right: 10px;font-size: 30px;font-family: chalkduster; ">YOU KNOW YOU WANT TO</p>')
+	$('.game-window').append('<p id="p3" style="visibility:hidden;visibility: hidden;color: red;position: absolute;-webkit-transform: rotate(7deg);top: 10px;left: 10px;font-size: 40px;font-family: chalkduster;">JUST PRESS IT</p>')
+	$('.game-window').append('<p id="p2" style="visibility:hidden;visibility: hidden;color: red;position: absolute;-webkit-transform: rotate(-7deg);right: 10px;bottom: 10px;font-size: 50px;font-family: chalkduster;">PRESS MEEEEEEE</p>')
+	$('.game-window').append('<p id="p1" style="visibility:hidden;	visibility: hidden;	color: red;position: absolute;bottom: 10px;font-size: 60px;font-family: chalkduster;">DO IT</p>')
 	var buttonTimeout = setTimeout(function(){
 		//Correct();
 		$("p").remove();
 		//level3(); 
 		Correct();
 	}, 7000);
-	setTimeout(function() {
+	var p1Timeout = setTimeout(function() {
 		$("#p1").css("visibility","visible");
 	}, 1000);
-	setTimeout(function() {
+	var p2Timeout = setTimeout(function() {
 		$("#p2").css("visibility","visible");
 	}, 2000);
-	setTimeout(function() {
+	var p3Timeout = setTimeout(function() {
 		$("#p3").css("visibility","visible");
 	}, 3000);
-
-	setTimeout(function() {
+	var p4Timeout = setTimeout(function() {
 		$("#p4").css("visibility","visible");
 	}, 4000);
 
 	$('#bigButton').click(function() {
+		$(".bigbtn").remove();
+		$("p").remove();
 		window.clearTimeout(buttonTimeout);
+		window.clearTimeout(p1Timeout);
+		window.clearTimeout(p2Timeout);
+		window.clearTimeout(p3Timeout);
+		window.clearTimeout(p4Timeout);
 		loseLives();
-		//level2(); 
+		if (lives > 0) {
+			level2(); 
+		}
 	});
 	$("p").click(function() {
-		$("#p4").css("visibility","hidden");
-		$("#p2").css("visibility","hidden");
-		$("#p3").css("visibility","hidden");
-		$("#p1").css("visibility","hidden");
+		$(".bigbtn").remove();
+		$("p").remove();
 		window.clearTimeout(buttonTimeout);
+		window.clearTimeout(p1Timeout);
+		window.clearTimeout(p2Timeout);
+		window.clearTimeout(p3Timeout);
+		window.clearTimeout(p4Timeout);
 		loseLives();
-		//level2(); 
+		if (lives > 0) {
+			level2(); 
+		}
 	});
 }
 

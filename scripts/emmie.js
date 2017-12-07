@@ -244,7 +244,7 @@ function loseLives() {
 		//render game over screen
 		if (state == 5){
 		 $('#banana').remove();
-	}
+		}
 	   if (state == 6){
 	   	console.log('here');
 		  $('.Disney').remove();
@@ -273,6 +273,7 @@ function loseLives() {
 			timeout = false;
 			$('#theImg').remove();
 		},1000);
+		
 	}
 
 }
