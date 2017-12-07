@@ -213,22 +213,22 @@ function question4() {
   var question_4 = "Click to cram for the EECS 493 exam!";
   $('#header').text(question_4);
 
-  $('.startIMG').append('<button class="q4" id="brainButton" type="button" onclick="Pump()">Study!</button>');
   $('.startIMG').append('<img class="q4" id="bar" src="img/greenbar.png"></img>');
   $('.startIMG').append('<img class="q4" id="brain" src="img/brain1.png"></img><br class="q4"><br class="q4">');
+  $('.startIMG').append('<button class="q4" id="brainButton" type="button" onclick="Pump()">Study!</button>');
   $('.startIMG').append('<img class="q4" id="widgetHome" src="img/widgethome.png" style="visibility: hidden"></img>');
   $('.startIMG').append('<img class="q4" id="jquery" src="img/jquery.png" style="visibility: hidden"></img>');
   $('.startIMG').append('<img class="q4" id="angular" src="img/angular.png" style="visibility: hidden"></img>');
   $('.startIMG').append('<button class="q4" id="timer" type="button" disabled>10</button>');
   $('.startIMG').append('<p class="q4" id="hurry">Hurry up!</p>');
- $('#brainButton').css('left','0');
- 
+ // $('#brainButton').css('left','0');
+
   var x = 10;
   y = setInterval(function() {
     --x;
     if (x <= -1) {
       Incorrect();
-      clearInterval(y);
+      // clearInterval(y);
       $('#hurry').css("visibility", "hidden");
       $('#timer').css("color", "black");
       x = 10;
@@ -308,7 +308,7 @@ function Correct() {
   //     break;
   //   case 20:
   //     level3();
-  //     break; 
+  //     break;
   //   default:
   //     break;
   // }
