@@ -2,19 +2,22 @@ Our main project sectio is shown in index.html. Currently we are working on addi
 
 This game is meant to have nonsensical answers, thus we have provided the correct answer to each level such that the instructors can play the whole game with minor frustration:
 
-
-Question 1: H
-Question 2: Berry->Apple->Nectarine->Apple->Nectarine->Apple
-Question 3: Click on Kuzco (the llama)
-Question 4: left most button (after the flash)
-Question 5: Behind you
-Question 6: Can you not
-Question 7: Click the squirrel
-Question 8: red-orange-white-purple-orange-red-teal
-Question 9: click on baby corgi, follow path with mouse cursor, click momma corgi
-Question 10: Window
-Question 11: Pause and don't click anything for 7 seconds 
-Question 12: LEGEND
+Question 1: the Blue
+Question 2: Click the question mark "?" in the question
+Question 3: Michigan (obviously)
+Question 4: Spam the "study" button until bar fills
+Question 5: H
+Question 6: Berry->Apple->Nectarine->Apple->Nectarine->Apple
+Question 7: Click on Kuzco (the llama)
+Question 8: top left most button (after the flash)
+Question 9: Behind you
+Question 10: Can you not
+Question 11: Click the squirrel
+Question 12: red-orange-white-purple-orange-red-teal
+Question 13: click on baby corgi, follow path with mouse cursor, click momma corgi
+Question 14: Window
+Question 15: Pause and don't click anything for 7 seconds 
+Question 16: LEGEND
 
 Game over!! 
 
