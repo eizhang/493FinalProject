@@ -218,8 +218,9 @@ function clickCorrect() {
 }
 
 function loseLives() {
-	console.log("time loseLives = " + timeout);
-	if (timeout){
+	// console.log("time loseLives = " + timeout);
+	console.log("state = " + state);
+	if (timeout && state !== 2){
 		return;
 	}
 	--lives;
@@ -234,7 +235,10 @@ function loseLives() {
 		$('#endMaze').remove();
 		startMaze();
 	}
-
+	if (state === 2){
+		console.log("state");
+	   	clearQ3(true);
+	}
 	if (lives < 1){
 		next = 0;
 		//render game over screen
@@ -520,6 +524,9 @@ function CorrectMaze(){
 }
 
 function lost(){
+	if (state === 2){
+		clearQ3(false);
+	}
 	$('.game-window').append("<img class='win-screen' src='img/Loss_Screen.png' style='position:absolute; left:0; top:0;'>");
 	$('.game-window').append('<img class="win-screen" onclick="restart()" src="img/Try_again.png" style="position:absolute; left:35%; bottom: 25%;z-index:2; height:100px;">')
 }

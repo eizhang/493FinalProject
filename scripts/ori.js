@@ -113,23 +113,10 @@ function question2() {
 
 
 }
-function question3() {
-  console.log("question3!");
-    $('#q-number').attr('src','img/level3.png');
-  $('.q2').remove();
-  var question_3 = "Pick the best team!";
- $('#header').text(question_3);
-  $('.startIMG').append('<img class="q3" id="mich" style="position:absolute;" src="img/michigan.png"></img><br class="q3"><br class="q3">');
-  $('.startIMG').append('<img class="q3" id="osu" src="img/osu.png"></img><br class="q3"><br class="q3">');
-  $('.startIMG').append('<img class="q3" id="minn" src="img/minn.png"></img><br class="q3"><br class="q3">');
-  $('.startIMG').append('<img class="q3" id="penn" src="img/penn.png"></img>');
-  let width = $('.game-window').width()-75;
-  $('#osu').css('left',width);
-  $('#penn').css('left',width);
-  $('#mich').css('left',0);
-  $('#minn').css('left',0);
 
-    function first() {
+function first() {
+  let width = $('.game-window').width()-75;
+      // console.log("first");
       $("#mich").animate({
         left: width
       }, 2500, function() {
@@ -146,9 +133,11 @@ function question3() {
         left: 0
       }, 2500, function() {
       });
-     var firstTime = setTimeout(second, 25);
+     firstTime = setTimeout(second, 25);
     }
     function second() {
+      let width = $('.game-window').width()-75;
+      // console.log("second");
         $("#mich").animate({
         left: 0
       }, 2500, function() {
@@ -165,46 +154,82 @@ function question3() {
         left: width
       }, 2500, function() {
       });
-      var secondTime = setTimeout(first, 25);
+      secondTime = setTimeout(first, 25);
     }
+    var firstExecution = null;
+function question3() {
+  console.log("question3!");
+    $('#q-number').attr('src','img/level3.png');
+  $('.q2').remove();
+  var question_3 = "Pick the best team!";
+  $('#header').text(question_3);
+  $('.startIMG').append('<img class="q3" id="mich" style="position:absolute;" src="img/michigan.png"></img><br class="q3"><br class="q3">');
+  $('.startIMG').append('<img class="q3" id="osu" src="img/osu.png"></img><br class="q3"><br class="q3">');
+  $('.startIMG').append('<img class="q3" id="minn" src="img/minn.png"></img><br class="q3"><br class="q3">');
+  $('.startIMG').append('<img class="q3" id="penn" src="img/penn.png"></img>');
+  let width = $('.game-window').width()-75;
+  $('#osu').css('left',width);
+  $('#penn').css('left',width);
+  $('#mich').css('left',0);
+  $('#minn').css('left',0);
+ 
 
-    setTimeout(first, 25);
+    
+
+    firstExecution = setTimeout(first, 25);
 
     $('#mich').click(function() {
+      $('#mich').finish();
+      $('#osu').finish();
+      $('#minn').finish();
+      $('#penn').finish();
+      clearQ3(false);
       Correct();
     });
     $('#osu').click(function() {
-      Incorrect();
-      /*$('#mich').finish();
+      // Incorrect();
+      $('#mich').finish();
       $('#osu').finish();
       $('#minn').finish();
-      $('#penn').finish();*/
+      $('#penn').finish();
       $('#mich').css('left',0);
       $('#osu').css('left',width);
       $('#minn').css('left',0);
       $('#penn').css('left',width);
+      //  clearTimeout(firstExecution);
+      // clearTimeout(secondTime);
+      // clearTimeout(firstTime);
+      Incorrect();
     });
     $('#minn').click(function() {
-      Incorrect();
-      /*$('#mich').finish();
+      // Incorrect();
+      $('#mich').finish();
       $('#osu').finish();
       $('#minn').finish();
-      $('#penn').finish();*/
+      $('#penn').finish();
       $('#mich').css('left',0);
       $('#osu').css('left',width);
       $('#minn').css('left',0);
       $('#penn').css('left',width);
+      //       clearTimeout(firstExecution);
+      // clearTimeout(secondTime);
+      // clearTimeout(firstTime);
+      Incorrect();
     });
     $('#penn').click(function() {
-      Incorrect();
-      /*$('#mich').finish();
+      
+      $('#mich').finish();
       $('#osu').finish();
       $('#minn').finish();
-      $('#penn').finish();*/
+      $('#penn').finish();
       $('#mich').css('left',0);
       $('#osu').css('left',width);
       $('#minn').css('left',0);
       $('#penn').css('left',width);
+      //       clearTimeout(firstExecution);
+      // clearTimeout(secondTime);
+      // clearTimeout(firstTime);
+      Incorrect();
     });
 }
 
@@ -328,4 +353,14 @@ function populate() {
   // $('.game-window').append("<input type='image' src='img/startbutton.png' width='200' height='120' class='b'/><br><br><br><br><br><br>");
   // $('.game-window').append("<input type='image' src='img/startbutton.png' width='200' height='120' class='c'/>");
   // $('.game-window').append("<input type='image' src='img/startbutton.png' width='200' height='120' class='d'/>");
+}
+
+function clearQ3(onLoseLives){
+  clearTimeout(firstTime);
+  clearTimeout(secondTime);
+  clearTimeout(firstExecution);
+  if (onLoseLives){
+    firstTime = setTimeout(first, 25);
+    secondTime = setTimeout(second, 25)
+  }
 }
