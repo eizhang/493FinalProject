@@ -22,39 +22,144 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="script.js"></script>
     <style type="text/css">
-    
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        @font-face {
+            font-family: kids;
+            src: url(style/kids.ttf);
+        }
+        body {
+            background-image: url("img/chalkboard.jpg");
+            font-family: kids;
+            color: white;
+        }
+        #title, #subtitle{ 
+            text-align: center;
+        }
+        h1 {
+            font-size: 100px; 
+        }
+        img {
+            height: 75%;
+            width: 75%;
+            
+        }
+        #final {
+            height: 45%;
+            width: 45%;
+        }
     </style>
 </head>
 
 
 <body>
-    <h1 id="title">The Impossibruuuuu Quiz (493 Final Project)</h1>
-    <h2 id="subtitle">Samantha Schwartz - Emmie Zhang - Ori Lindner - Bryant Vergara</h2>
-    <div class = top-content> 
-        <div id="background-info">
-            <h3>Background</h3>
-            <p>The Impossibruuuu Quiz is a web-based game to challenge users to think outside the box when tackling, on the outside, what seems like a standard point-and-click quiz. Our quiz is designed to have non-trivial answers, testing how the user interacts with the DOM and knowledge of pop-culture and other topics.</p>
-        </div>
-        <div id="gameplay-info">
-            <h3>Gameplay</h3>
-            <p>The quiz is a compilation of unique levels designed to test how the user interacts with the page. All interactions are based on point-and-click events.</p>
-        </div>
+    <div class="nah"> 
+        <h1 id="title">The Impossibruuuuu Quiz (493 Final Project)</h1>
+        <h3 id="subtitle">Samantha Schwartz - Emmie Zhang - Ori Lindner - Bryant Vergara</h2>
     </div>
-    <div id="views">
-        <img src="img/screen1.png">
-        <img src="img/screen2.png">
-        <img src="img/screen3.png">
-        <img src="img/screen4.png">
-        <img src="img/screen5.png">
-        <img src="img/screen6.png">
-        <img src="img/screen7.png">
-        <img src="img/screen8.png">
-        <img src="img/screen9.png">
-        <img src="img/screen10.png">
-        <img src="img/screen11.png">
-        <img src="img/screen12.png">
-        <img src="img/screen13.png">
-        <img src="img/screen14.png">
+    <div class="container">
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <h2>Background</h2>
+                <h3>The Impossibruuuu Quiz is a web-based game to challenge users to think outside the box when tackling, on the outside, what seems like a standard point-and-click quiz. Our quiz is designed to have non-trivial answers, testing how the user interacts with the DOM and knowledge of pop-culture and other topics.</h3>
+
+            </div>
+            <div class="col-md-6"> 
+                <h2>Gameplay</h2>
+                <h3>The quiz is a compilation of unique levels designed to test how the user interacts with the page. All interactions are based on point-and-click events.</h3>
+                <br><br><br><br>
+            </div>
+
+        </div>
+        <h1 class="text-center">Levels!</h1>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen1.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen2.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen3.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen4.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen5.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen6.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen7.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen8.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen9.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen10.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen11.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen12.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen13.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen14.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen15.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen16.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="views" class="row">
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen17.png">
+            </div>
+            <div class="col-md-6"> 
+                <img class="center-block" src="img/screen18.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <div class="row">
+            <div class="text-center">
+                <img id="final" class="center-block" src="img/screen19.png">
+            </div>
+        </div>
+        <br><br><br><br>
+        <br><br><br><br>
     </div>
 </body>
 </html>
