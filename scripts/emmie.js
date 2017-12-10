@@ -398,7 +398,9 @@ function colorMeRed() {
 }
 
 function startMaze() {
+	maze_start = 1;
 	$('#header').empty();
+
 	$('#q-number').attr('src','img/level13.png');
 	$('#header').append('<h3 id="startMsg">Go to the pupper! </h3>')
 	$('.startIMG').append('<img id="startMaze" src= "img/corgi.jpg" onmouseover="maze()"></img>');
@@ -410,6 +412,7 @@ function startMaze() {
 }
 
 function maze() {
+	if(maze_start){
 	$('#startMsg').remove();
 	$('#q-number').css('visibility','hidden');
 	$('.startIMG').append('<div class="maze" id="maze_1" onmouseover="loseLives()"><a/></div>');
@@ -507,8 +510,8 @@ function maze() {
 		'right':'0px',
 		'z-index':'-1'
 	})
-
-
+	maze_start = 0;
+}
 }
 
 function CorrectMaze(){

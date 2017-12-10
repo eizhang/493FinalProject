@@ -71,6 +71,7 @@ function level2() {
 		//Correct();
 		$("p").remove();
 		//level3(); 
+		$(".bigbtn").remove();
 		Correct();
 	}, 7000);
 	var p1Timeout = setTimeout(function() {
